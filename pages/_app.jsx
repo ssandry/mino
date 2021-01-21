@@ -1,4 +1,3 @@
-
 import "../assets/sass/global.scss";
 
 function MyApp({ Component, pageProps }) {
