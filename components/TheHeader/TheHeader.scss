@@ -22,6 +22,11 @@ header {
 
         $mobile_paddings: 7vw;
 
+        @media screen and (min-width: 1660px) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
         @media screen and( max-width:600px ) {
             padding-left: $mobile_paddings;
             padding-right: $mobile_paddings;
