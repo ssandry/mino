@@ -6,6 +6,12 @@ h1 {
     line-height: 107px;
 
     color: #FFFFFF;
+
+    &.logo {
+        span {
+            font-style: italic;
+        }
+    }
 }
 
 h2 {
