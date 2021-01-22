@@ -1,7 +1,10 @@
+import TheHeader from "../components/TheHeader/TheHeader";
+
 const DefaultLayout = ( { children } ) => {
-    return <div>
+    return <>
+        <TheHeader />
         { children }
-    </div>
+    </>
 }
 
 export default DefaultLayout;

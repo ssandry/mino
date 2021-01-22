@@ -1,6 +1,8 @@
 
-@import "./reset.scss";
+@import "./reset";
 @import "./typography";
+
+@import "../../components/TheHeader/TheHeader";
 
 body {
     background-color: black;
