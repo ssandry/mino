@@ -1,0 +1,22 @@
+type Collection {
+    id: ID!
+    titleENG: String!
+    titleJPN: String!
+    by: String!
+    release: String!
+    year: String!
+    coverImg: String!
+    collage: String!
+    about: String!
+    preAbout: String!
+    team: [prodBy]!
+}
+
+type prodBy {
+    prof: String!
+    name: String!
+}
+
+type Query {
+    getAllCollections: [Collection]!
+}

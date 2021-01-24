@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "description": "-",
   "main": "index.js",
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
   "scripts": {
-    "dev": "next",
+    "dev": "concurrently \" node ./server/index.graphql.js \" \" next \" ",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "gql": "node ./server/index.graphql.js "
   },
   "repository": {
     "type": "git",
@@ -21,11 +27,16 @@
   },
   "homepage": "https://github.com/ssandry/mino#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "fs": "0.0.1-security",
+    "graphql": "^15.4.0",
     "next": "^10.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "concurrently": "^5.3.0",
     "sass": "^1.32.5"
   }
 }
