@@ -43,7 +43,9 @@ export const getStaticProps =  async () => {
                 cache: new InMemoryCache()
             })
 
-            const { data } = await client.query({ query: gql`
+            const { data } = await client.query
+            ({ query: gql`
+
                 query getAllCollections {
                     getAllCollections {
                         id 
@@ -53,7 +55,8 @@ export const getStaticProps =  async () => {
                         coverImg
                     }
                 }
-            ` })
+                
+            `})
 
             return {
                 props: {
@@ -64,7 +67,7 @@ export const getStaticProps =  async () => {
         } catch(err) {
             console.log( `Err: ${err}` )
         }
-        
+
     } else if( process.env.MODE === "production" ) {
         try {
 
