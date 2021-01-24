@@ -3,6 +3,9 @@
 @import "./typography";
 
 @import "../../components/TheHeader/TheHeader";
+@import "../../components/Card/Card";
+
+@import "./pages/index";
 
 body {
     background-color: black;
@@ -11,7 +14,7 @@ body {
     min-width: 100vw;
 
     &::-webkit-scrollbar { width: 0 !important }
-    &::scrollbar { width: 0;}
+    &::scrollbar { width: 0; }
 
     .defaultLayout {
         width: 100%;

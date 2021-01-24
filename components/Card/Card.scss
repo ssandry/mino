@@ -1,0 +1,49 @@
+.Card {
+    width: 100%;
+    height: 628px;
+    max-height: 628px;
+    display: block;
+
+    &__img {
+        width: 100%;
+        height: 92%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+    }
+
+    .tags {
+        height: 8%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .tags_line {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            h6 {
+                color: #cfcfcf;
+                span {
+                    font-weight: 300;
+                    color: #cfcfcf;
+                }
+            }
+    
+            .tags_time {
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: 0.2em;
+                color: #cfcfcf;
+            }
+        }
+    }
+}

@@ -57,7 +57,18 @@ h5 {
     color: #FFFFFF;
 }
 
-p, i, a {
+h6 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.2em;
+
+    color: #FFFFFF;
+}
+
+p, i, a, div {
     font-family: "Roboto", sans-serif;
     color: #C9C9C9;
 }
