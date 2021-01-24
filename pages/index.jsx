@@ -3,7 +3,7 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import DefaultLayout from  "../layouts/default";
 import Card from "../components/Card/Card";
 
-const IndexPage = ( {collections} ) => {
+const IndexPage = ( { collections } ) => {
     return <DefaultLayout>
         <div className="headerIndex">
             <h1 className="logo">
@@ -36,25 +36,49 @@ const IndexPage = ( {collections} ) => {
 
 export const getStaticProps =  async () => {
     if( process.env.MODE === "development" ) {
-        const client = new ApolloClient({
-            uri: process.env.DEV_GRAPHQL_SERVER,
-            cache: new InMemoryCache()
-        })
-        const { data } = await client.query({ query: gql`
-            query getAllCollections {
-                getAllCollections {
-                    id 
-                    titleENG
-                    titleJPN
-                    year
-                    coverImg
+        try {
+
+            const client = new ApolloClient({
+                uri: process.env.DEV_GRAPHQL_SERVER,
+                cache: new InMemoryCache()
+            })
+
+            const { data } = await client.query({ query: gql`
+                query getAllCollections {
+                    getAllCollections {
+                        id 
+                        titleENG
+                        titleJPN
+                        year
+                        coverImg
+                    }
+                }
+            ` })
+
+            return {
+                props: {
+                    collections: data.getAllCollections
                 }
             }
-        ` })
-        return {
-            props: {
-                collections: data.getAllCollections
+
+        } catch(err) {
+            console.log( `Err: ${err}` )
+        }
+        
+    } else if( process.env.MODE === "production" ) {
+        try {
+
+            const res = await fetch(process.env.PROD_SERVER);
+            const collections = await res.json();
+
+            return {
+                props: {
+                    collections
+                }
             }
+
+        } catch(err) {
+            console.log( `Err: ${err}` )
         }
     }
 }
