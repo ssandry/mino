@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/ssandry/mino#readme",
   "dependencies": {
+    "@apollo/client": "^3.3.7",
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
     "fs": "0.0.1-security",
