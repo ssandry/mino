@@ -20,7 +20,8 @@ const IndexPage = ( { collections } ) => {
                     return (
                         <Card 
                             key = {c.id}
-                            HREF="/"
+                            HREF="/collection/[id]"
+                            AS={`/collection/${c.id}`}
                             SRC={c.coverImg}
                             ALT=""
                             engCL={c.titleENG}

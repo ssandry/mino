@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-const Card = ({ HREF, SRC, ALT, engCL, jpCL, YEAR }) => {
-    return <Link href = {HREF} >
+const Card = ({ HREF, SRC, ALT, engCL, jpCL, YEAR, AS }) => {
+    return <Link href = {HREF} as={AS} >
         <a className="Card">
             <div className="Card__img">
                 <img src={SRC} alt={ALT}/>
