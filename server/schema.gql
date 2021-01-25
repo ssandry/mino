@@ -19,4 +19,5 @@ type prodBy {
 
 type Query {
     getAllCollections: [Collection]!
+    getCollection(id: ID!): Collection!
 }
