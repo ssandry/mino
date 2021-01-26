@@ -4,6 +4,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 
     @media screen and( max-width:600px ) {
         height: 120px;
@@ -96,6 +97,7 @@ header {
                 width: 17vw;
                 min-width: 240px;
                 justify-content: space-between;
+                z-index: 1;
 
                 @media screen and( max-width:600px ) {
                     height: 100%;
@@ -114,6 +116,8 @@ header {
                     font-size: 18px;
                     line-height: $link_line_height;
                     color: #D2D2D2;
+                    position: relative;
+                    z-index: 1;
 
                     @media screen and( max-width:600px ) {
                         font-size: 16px;
