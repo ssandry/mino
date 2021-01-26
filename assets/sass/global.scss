@@ -6,6 +6,7 @@
 @import "../../components/Card/Card";
 
 @import "./pages/index";
+@import "./pages/collection/[id].scss";
 
 body {
     background-color: black;

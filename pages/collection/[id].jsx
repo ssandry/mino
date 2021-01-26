@@ -1,11 +1,46 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
+import DefaultLayout from "../../layouts/default";
+
 const Collection = ( {collection} ) => {
-    return (
-        <h1>
-            Collection: { collection.titleENG }
-        </h1>
-    )
+    return <DefaultLayout>
+        <div className="collection-main">
+            <div className="collection-main-img">
+                <img src={collection.coverImg} alt=""/>
+            </div>
+            <div className="collection-h">
+                <div className="collection-name">
+                    <div>
+                        <h1 className="logo">
+                            MI<span>N</span>O /
+                        </h1>
+                        <h2> {collection.titleENG}</h2>
+                    </div>
+                    <h5>{collection.by} {collection.release}</h5>
+                </div>
+            </div>
+        </div>
+        <div className="collection-collage">
+            <img src={collection.collage} alt=""/>
+        </div>
+        <div className="line">
+            <div className="line-img"></div>
+        </div>
+        <div className="about">
+            <h6>The New collection <br/> S - J 2022</h6>
+            <h1>{ collection.about }</h1>
+            <div className="prod">
+                { collection.team.map( (t) => {
+                    return (
+                        <div>
+                            <span className="prof" >{t.prof}</span>
+                            <span className="name" >{t.name}</span>
+                        </div>
+                    )
+                } ) }
+            </div>
+        </div>
+    </DefaultLayout>
 }
 
 export const getStaticProps = async (ctx) => {

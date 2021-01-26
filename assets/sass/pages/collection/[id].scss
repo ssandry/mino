@@ -1,0 +1,113 @@
+.collection-main {
+    width: 100%;
+    height: 100vh;
+    margin-top: -191px; // heoght TheHeader
+    z-index: -1;
+
+    &-img {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: -1;
+
+        img {
+            width: 565px;
+            height: 100%;
+            position: relative;
+            left: 40px;
+            object-fit: cover;
+            object-position: center;
+            z-index: -1;
+        }
+    }
+}
+
+.collection-h {
+    width: 100%;
+    height: 100vh;
+    margin-top: -100vh;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .collection-name {
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            white-space: pre;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.collection-collage {
+    width: 100%;
+    margin-top: 80px;
+
+    img {
+        object-position: center;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.line {
+    width: 12px;
+    height: 125px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .line-img {
+        width: 12px;
+        height: 125px;
+        background-image: url("/line.png");
+        background-repeat: no-repeat;
+    }
+}
+
+.about {
+    h6 {
+        color: rgb(119, 119, 119);
+        letter-spacing: 0.1em;
+    }
+
+    h1 {
+        margin-top: 20px;
+    }
+
+    .prod {
+        margin-top: 30px;
+
+        .prof {
+            font-family: Bodoni Moda;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            text-transform: capitalize;
+            color: #BFBFBF;
+        }
+
+        .name {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 21px;
+            text-transform: capitalize;
+            color: #BFBFBF;
+            margin-left: 10px;
+        }
+    }
+}
