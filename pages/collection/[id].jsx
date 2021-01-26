@@ -32,7 +32,7 @@ const Collection = ( {collection} ) => {
             <div className="prod">
                 { collection.team.map( (t) => {
                     return (
-                        <div>
+                        <div key={t.name}>
                             <span className="prof" >{t.prof}</span>
                             <span className="name" >{t.name}</span>
                         </div>
