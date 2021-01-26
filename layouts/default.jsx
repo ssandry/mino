@@ -1,4 +1,5 @@
 import TheHeader from "../components/TheHeader/TheHeader";
+import TheFooter from "../components/TheFooter/index";
 
 const DefaultLayout = ( { children } ) => {
     return <>
@@ -8,6 +9,7 @@ const DefaultLayout = ( { children } ) => {
                 { children }
             </main>
         </div>
+        <TheFooter />
     </>
 }
 
