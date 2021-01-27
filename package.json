@@ -10,8 +10,7 @@
   ],
   "scripts": {
     "dev": "concurrently \" node ./server/index.graphql.js \" \" next \" ",
-    "b": "concurrently \" node ./server/index.graphql.js \" \" next build \" ",
-    "s": "concurrently \" node ./server/index.graphql.js \" \" next start \" ",
+    "api": "python3 ./api/__api__.py",
     "build": "next build",
     "start": "next start",
     "export": "next export",
