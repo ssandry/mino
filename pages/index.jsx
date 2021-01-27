@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
-import {AnimatePresence} from "framer-motion"
+import { AnimatePresence } from "framer-motion"
  
 import DefaultLayout from  "../layouts/default";
 import Card from "../components/Card/Card";

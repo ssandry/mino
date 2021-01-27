@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Card = ({ HREF, SRC, ALT, engCL, jpCL, YEAR, AS }) => {
     return <Link href = {HREF} as={AS} >
