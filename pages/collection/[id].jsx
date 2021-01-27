@@ -2,16 +2,26 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 import DefaultLayout from "../../layouts/default";
 
+import { motion, AnimatePresence } from "framer-motion";
+
 const Collection = ( {collection} ) => {
     return <DefaultLayout>
+        <AnimatePresence>
         <div className="collection-main">
             <div className="collection-h">
                 <div className="collection-name">
-                    <div className="imgabs">
-                        <img src={collection.coverImg} alt=""/>
-                    </div>
+                    <motion.div 
+                        className="imgabs" 
+                        layoutId={collection.coverImg}
+                        transition={{ duration: .75 }}
+                    >
+                        <img 
+                            src={collection.coverImg} 
+                            alt=""
+                        />
+                    </motion.div>
                     <div>
-                        <h1 className="logo">
+                        <h1 className="logo" >
                             MI<span>N</span>O /
                         </h1>
                         <h2> {collection.titleENG}</h2>
@@ -40,6 +50,7 @@ const Collection = ( {collection} ) => {
                 } ) }
             </div>
         </div>
+        </AnimatePresence>
     </DefaultLayout>
 }
 
