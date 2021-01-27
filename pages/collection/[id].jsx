@@ -5,11 +5,11 @@ import DefaultLayout from "../../layouts/default";
 const Collection = ( {collection} ) => {
     return <DefaultLayout>
         <div className="collection-main">
-            <div className="collection-main-img">
-                <img src={collection.coverImg} alt=""/>
-            </div>
             <div className="collection-h">
                 <div className="collection-name">
+                    <div className="imgabs">
+                        <img src={collection.coverImg} alt=""/>
+                    </div>
                     <div>
                         <h1 className="logo">
                             MI<span>N</span>O /
