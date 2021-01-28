@@ -58,38 +58,12 @@ export const getStaticProps = async (ctx) => {
     if( process.env.MODE === "development" ) {
         try {
 
-            const client = new ApolloClient({
-                uri: process.env.DEV_GRAPHQL_SERVER,
-                cache: new InMemoryCache()
-            })
-    
-            const { data } = await client.query
-            ({ query: gql`
-    
-                query getCollection {
-                    getCollection(id: ${ctx.params.id}) {
-                        id
-                        titleENG
-                        titleJPN
-                        by
-                        release
-                        year
-                        coverImg
-                        collage
-                        about
-                        preAbout
-                        team {
-                            prof
-                            name
-                        }
-                    }
-                }
-                
-            `})
+            const res = await fetch(`${process.env.DEV_PYTHON_API}/api/v.1.0/get-collections/${ctx.params.id}`);
+            const collection = await res.json();
     
             return {
                 props: {
-                    collection: data.getCollection
+                    collection: collection
                 }
             }
 
@@ -123,23 +97,11 @@ export const getStaticPaths = async () => {
 
     if( process.env.MODE === "development" ) {
         try {
-            const client = new ApolloClient({
-                uri: process.env.DEV_GRAPHQL_SERVER,
-                cache: new InMemoryCache()
-            })
+            
+            const res = await fetch(`${process.env.DEV_PYTHON_API}/api/v.1.0/get-collections`);
+            const { collections } = await res.json();
     
-            const { data } = await client.query
-            ({ query: gql`
-    
-                query getAllCollections {
-                    getAllCollections {
-                        id 
-                    }
-                }
-                
-            `})
-    
-            const paths = data.getAllCollections.map( (p) => {
+            const paths = collections.map( (p) => {
                 return { params: { id: p.id } }
             } )
     

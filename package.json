@@ -9,7 +9,7 @@
     "maintained node versions"
   ],
   "scripts": {
-    "dev": "concurrently \" node ./server/index.graphql.js \" \" next \" ",
+    "dev": "concurrently \" python3 ./api/__api__.py \" \" next \" ",
     "api": "python3 ./api/__api__.py",
     "build": "next build",
     "start": "next start",

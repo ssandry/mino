@@ -43,29 +43,12 @@ export const getStaticProps =  async () => {
     if( process.env.MODE === "development" ) {
         try {
 
-            const client = new ApolloClient({
-                uri: process.env.DEV_GRAPHQL_SERVER,
-                cache: new InMemoryCache()
-            })
-
-            const { data } = await client.query
-            ({ query: gql`
-
-                query getAllCollections {
-                    getAllCollections {
-                        id 
-                        titleENG
-                        titleJPN
-                        year
-                        coverImg
-                    }
-                }
-                
-            `})
+            const res = await fetch(`${process.env.DEV_PYTHON_API}/api/v.1.0/get-collections`);
+            const { collections } = await res.json();
 
             return {
                 props: {
-                    collections: data.getAllCollections
+                    collections: collections
                 }
             }
 
