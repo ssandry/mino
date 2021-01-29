@@ -1,7 +1,3 @@
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-
-import { AnimatePresence } from "framer-motion"
- 
 import DefaultLayout from  "../layouts/default";
 import Card from "../components/Card/Card";
 
@@ -20,18 +16,16 @@ const IndexPage = ( { collections } ) => {
             {
                 collections.map( (c) => {
                     return (
-                        <AnimatePresence>
-                            <Card 
-                                key = {c.id}
-                                HREF="/collection/[id]"
-                                AS={`/collection/${c.id}`}
-                                SRC={c.coverImg}
-                                ALT=""
-                                engCL={c.titleENG}
-                                jpCL={c.titleJPN}
-                                YEAR={c.year}
-                            />
-                        </AnimatePresence>
+                        <Card 
+                            key = {c.id}
+                            HREF="/collection/[id]"
+                            AS={`/collection/${c.id}`}
+                            SRC={c.coverImg}
+                            ALT=""
+                            engCL={c.titleENG}
+                            jpCL={c.titleJPN}
+                            YEAR={c.year}
+                        />
                     )
                 } )
             }

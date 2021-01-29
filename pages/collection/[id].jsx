@@ -1,56 +1,51 @@
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-
+import { motion } from "framer-motion";
 import DefaultLayout from "../../layouts/default";
-
-import { motion, AnimatePresence } from "framer-motion";
 
 const Collection = ( {collection} ) => {
     return <DefaultLayout>
-        <AnimatePresence>
-            <div className="collection-main">
-                <div className="collection-h">
-                    <div className="collection-name">
-                        <motion.div 
-                            className="imgabs" 
-                            layoutId={collection.coverImg}
-                            transition={{ duration: .75 }}
-                        >
-                            <img 
-                                src={collection.coverImg} 
-                                alt=""
-                            />
-                        </motion.div>
-                        <div>
-                            <h1 className="logo" >
-                                MI<span>N</span>O /
-                            </h1>
-                            <h2> {collection.titleENG}</h2>
-                        </div>
-                        <h5>{collection.by} {collection.release}</h5>
+        <div className="collection-main">
+            <div className="collection-h">
+                <div className="collection-name">
+                    <motion.div 
+                        className="imgabs" 
+                        layoutId={collection.coverImg}
+                        transition={{ duration: .75 }}
+                    >
+                        <img 
+                            src={collection.coverImg} 
+                            alt=""
+                        />
+                    </motion.div>
+                    <div>
+                        <h1 className="logo" >
+                            MI<span>N</span>O /
+                        </h1>
+                        <h2> {collection.titleENG}</h2>
                     </div>
+                    <h5>{collection.by} {collection.release}</h5>
                 </div>
             </div>
-            <div className="collection-collage">
-                <img src={collection.collage} alt=""/>
+        </div>
+        <div className="collection-collage">
+            <img src={collection.collage} alt=""/>
+        </div>
+        <div className="line">
+            <div className="line-img"></div>
+        </div>
+        <div className="about">
+            <h6>The New collection <br/> S - J 2022</h6>
+            <h1>{ collection.about }</h1>
+            <div className="prod">
+                { collection.team.map( (t) => {
+                    return (
+                        <div key={t.name}>
+                            <span className="prof" >{t.prof}</span>
+                            <span className="name" >{t.name}</span>
+                        </div>
+                    )
+                } ) }
             </div>
-            <div className="line">
-                <div className="line-img"></div>
-            </div>
-            <div className="about">
-                <h6>The New collection <br/> S - J 2022</h6>
-                <h1>{ collection.about }</h1>
-                <div className="prod">
-                    { collection.team.map( (t) => {
-                        return (
-                            <div key={t.name}>
-                                <span className="prof" >{t.prof}</span>
-                                <span className="name" >{t.name}</span>
-                            </div>
-                        )
-                    } ) }
-                </div>
-            </div>
-        </AnimatePresence>
+        </div>
     </DefaultLayout>
 }
 
