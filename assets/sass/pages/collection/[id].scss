@@ -16,6 +16,14 @@
             object-fit: cover;
             object-position: center;
             max-width: 580px;
+
+            @media screen and (min-width: 1660px) {
+                max-width: 650px;
+            }
+        }
+
+        @media screen and (min-width: 1660px) {
+            max-width: 650px;
         }
     }
 
