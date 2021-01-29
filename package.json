@@ -9,12 +9,12 @@
     "maintained node versions"
   ],
   "scripts": {
-    "dev": "concurrently \" python3 ./api/__api__.py \" \" next \" ",
-    "api": "python3 ./api/__api__.py",
+    "dev": "concurrently \" python3 ./api/app/__init__.py \" \" next \" ",
+    "api": "python3 ./api/app/__init__.py",
+    "gql": "node ./server/index.graphql.js ",
     "build": "next build",
     "start": "next start",
-    "export": "next export",
-    "gql": "node ./server/index.graphql.js "
+    "export": "next export"
   },
   "repository": {
     "type": "git",
