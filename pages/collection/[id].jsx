@@ -111,8 +111,8 @@ export const getStaticPaths = async () => {
     } else if( process.env.MODE === "production" ) {
         try {
 
-            const res = await fetch(process.env.PROD_SERVER)
-            const collections = await res.json();
+            const res = await fetch(`${process.env.PROD_HEROKU_MINO_API}/api/v.1.0/get-collections`);
+            const { collections } = await res.json();
 
             const paths = await collections
             .map( (p) => {
