@@ -69,12 +69,8 @@ export const getStaticProps = async (ctx) => {
     } else if( process.env.MODE === "production" ) {
         try {
 
-            const res = await fetch(process.env.PROD_SERVER);
-            const collections = await res.json();
-
-            const collection = 
-            await collections
-            .find( ( {id} ) => { return id === ctx.params.id } )
+            const res = await fetch(`${process.env.PROD_HEROKU_MINO_API}/api/v.1.0/get-collections/${ctx.params.id}`);
+            const collection = await res.json();
 
             return {
                 props: {
