@@ -9,14 +9,23 @@ with open("./data/collections.json", encoding="utf-8") as json_data:
     collections = json.load(json_data) 
 
 
+@app.route("/", methods=["GET"])
+@app.route("/index-api", methods=["GET"])
+@app.route("/mino-api", methods=["GET"])
+def index():
+    return "dev mino api"
+
+
 @app.route("/api/v.1.0/get-collections", methods=["GET"])
 @app.route("/api/get-collections", methods=["GET"])
+@app.route("/mino-api/get-collections", methods=["GET"])
 def get_collections():
     return jsonify({ "collections": collections })
 
 
 @app.route("/api/v.1.0/get-collections/<int:collection_id>", methods=["GET"])
 @app.route("/api/get-collections/<int:collection_id>", methods=["GET"])
+@app.route("/mino-api/v.1.0/get-collections/<int:collection_id>", methods=["GET"])
 def get_collection(collection_id):
     return collections[collection_id]
 
