@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 import json
 
 
@@ -13,7 +13,7 @@ with open("./data/collections.json", encoding="utf-8") as json_data:
 @app.route("/index-api", methods=["GET"])
 @app.route("/mino-api", methods=["GET"])
 def index():
-    return "dev mino api"
+    return render_template("index.html")
 
 
 @app.route("/api/v.1.0/get-collections", methods=["GET"])
