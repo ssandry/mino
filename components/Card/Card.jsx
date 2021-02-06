@@ -8,7 +8,7 @@ const Card = ({ HREF, SRC, ALT, engCL, jpCL, YEAR, AS }) => {
             <motion.div 
                 className="Card__img" 
                 layoutId={SRC} 
-                transition={{ duration: .5 }}
+                transition={{ duration: 0 }}
             >    
                 <img 
                     src={SRC} 
