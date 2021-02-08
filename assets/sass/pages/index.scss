@@ -9,6 +9,12 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
+    @media screen and (max-width: 700px) {
+        height: 145px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
     p {
         font-weight: normal;
         font-size: 13px;
@@ -26,4 +32,8 @@
     gap: 4vw;
 
     margin-top: 60px;
+
+    @media screen and (max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
 }

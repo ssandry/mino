@@ -7,7 +7,19 @@ h1 {
 
     color: #FFFFFF;
 
+    @media screen and (max-width: 700px) {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 40px;
+    }
+
     &.logo {
+        
+        @media screen and (max-width: 700px) {
+            text-align: center;
+        }
+
         span {
             font-style: italic;
         }
@@ -21,6 +33,14 @@ h2 {
     font-size: 54px;
     line-height: 63px;
     letter-spacing: 0.2em;
+
+    @media screen and (max-width: 700px) {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.15em;
+    }
 
     color: #FFFFFF;
 }
@@ -55,6 +75,16 @@ h5 {
     line-height: 37px;
 
     color: #FFFFFF;
+
+    @media screen and (max-width: 700px) {
+        font-family: Bodoni Moda;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+
+    }
 }
 
 h6 {
@@ -67,6 +97,17 @@ h6 {
     text-transform: uppercase;
 
     color: #FFFFFF;
+
+    @media screen and (max-width: 700px) {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+
+        color: #BFBFBF;
+    }
 }
 
 p, i, a, div {

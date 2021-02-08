@@ -59,6 +59,7 @@ header {
 
         label {
             margin-top: -5px;
+            z-index: 100;
 
             @media screen and( max-width:600px ) {
                 width: 24px;

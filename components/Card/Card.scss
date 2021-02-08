@@ -4,6 +4,11 @@
     max-height: 888px;
     display: block;
 
+    @media screen and (max-width: 700px) {
+        height: 450px;
+    }
+
+
     @media screen and (min-height: 1000px) {
         height: 89vh;
         max-height: 908px;
@@ -44,7 +49,7 @@
     
             .tags_time {
                 font-weight: 300;
-                font-size: 18px;
+                font-size: 14px;
                 line-height: 21px;
                 letter-spacing: 0.2em;
                 color: #cfcfcf;
