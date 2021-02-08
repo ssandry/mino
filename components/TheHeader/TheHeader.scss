@@ -119,6 +119,15 @@ header {
                     color: #D2D2D2;
                     position: relative;
                     z-index: 1;
+                    transition-duration: .25s;
+
+                    &.disactive {
+                        opacity: 0.2;
+                    }
+
+                    &.active {
+                        opacity: 1;
+                    }
 
                     @media screen and( max-width:600px ) {
                         font-size: 16px;
