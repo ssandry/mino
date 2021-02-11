@@ -1,12 +1,12 @@
-import DefaultLayout from  "../layouts/default";
+import DefaultLayout from "../layouts/default";
 import Card from "../components/Card/Card";
 
 const IndexPage = ( { collections } ) => {
     return <DefaultLayout>
         <div className="headerIndex">
-            <h1 className="logo" >
-                MI<span>N</span>O
-                Collections
+            <h1 className="logo">
+                <span>MI<span className="n">N</span>O </span>
+                <span> Collections</span>
             </h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor.
