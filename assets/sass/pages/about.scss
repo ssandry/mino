@@ -1,0 +1,36 @@
+.aboutHeader {
+    height: 514px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .p-f {
+        width: 60vw;
+        max-width: 476px;
+        text-align: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+
+        color: #4B4B4B;
+    }
+
+    .p-l {
+        width: 268px;
+        text-align: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+
+        color: #A2A2A2;
+    }
+}
