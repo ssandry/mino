@@ -30,7 +30,7 @@ const TheHeader = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/">
+                            <Link href="/about">
                                 <a 
                                     className={ acLn === "about" ? "active" : "disactive" }  
                                     onClick = { () => { setAcLn("about") } }  
