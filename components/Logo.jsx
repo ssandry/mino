@@ -10,7 +10,7 @@ const Logo = () => {
                     width: 34px;
                     height: 34px;
 
-                    background-image: url("/logo.jpg");
+                    background-image: url("/static/logo.jpg");
                     background-size: cover;
                     background-position: center;
                 }
