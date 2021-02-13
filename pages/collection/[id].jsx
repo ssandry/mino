@@ -18,7 +18,7 @@ const Collection = ( {collection} ) => {
                     </motion.div>
                     <div>
                         <h1 className="logo" >
-                            MI<span>N</span>O /
+                            MI<span className="n">N</span>O /
                         </h1>
                         <h2> {collection.titleENG}</h2>
                     </div>
