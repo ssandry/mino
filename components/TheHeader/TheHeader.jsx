@@ -1,11 +1,10 @@
 import Link from "next/link";
 import Logo from "../Logo";
-
-import { useState } from "react";
+import { useRouter } from 'next/router'
 
 const TheHeader = () => {
 
-    const [ acLn, setAcLn ] = useState("collections")
+    const router = useRouter()
 
     return (
         <header>
@@ -21,30 +20,21 @@ const TheHeader = () => {
                     <ul>
                         <li>
                             <Link href="/">
-                                <a 
-                                    className={ acLn === "team" ? "active" : "disactive" }
-                                    onClick = { () => { setAcLn("team") } }
-                                >
+                                <a className={ router.pathname === "/team" ? "active" : "disactive" }>
                                     Team
                                 </a>
                             </Link>
                         </li>
                         <li>
                             <Link href="/about">
-                                <a 
-                                    className={ acLn === "about" ? "active" : "disactive" }  
-                                    onClick = { () => { setAcLn("about") } }  
-                                >
+                                <a className={ router.pathname === "/about" ? "active" : "disactive" }>
                                     About
                                 </a>
                             </Link>
                         </li>
                         <li>
                             <Link href="/">
-                                <a 
-                                    className={ acLn === "collections" ? "active" : "disactive" }  
-                                    onClick = { () => { setAcLn("collections") } }  
-                                >
+                                <a className={ router.pathname === "/" ? "active" : "disactive" }>
                                     Collections
                                 </a>
                             </Link>
