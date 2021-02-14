@@ -1,36 +1,42 @@
+import Head from "next/head";
 import DefaultLayout from "../layouts/default";
 import Card from "../components/Card/Card";
 
 const IndexPage = ( { collections } ) => {
-    return <DefaultLayout>
-        <div className="headerIndex">
-            <h1 className="logo">
-                <span>MI<span className="n">N</span>O </span>
-                <span> Collections</span>
-            </h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor.
-            </p>
-        </div>
-        <div id="collections-grid">
-            {
-                collections.map( (c) => {
-                    return (
-                        <Card 
-                            key = {c.id}
-                            HREF="/collection/[id]"
-                            AS={`/collection/${c.id}`}
-                            SRC={c.coverImg}
-                            ALT=""
-                            engCL={c.titleENG}
-                            jpCL={c.titleJPN}
-                            YEAR={c.year}
-                        />
-                    )
-                } )
-            }
-        </div>
-    </DefaultLayout>
+    return <>
+        <Head>
+            <title>MINO Collections</title>
+        </Head>
+        <DefaultLayout>
+            <div className="headerIndex">
+                <h1 className="logo">
+                    <span>MI<span className="n">N</span>O </span>
+                    <span> Collections</span>
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor.
+                </p>
+            </div>
+            <div id="collections-grid">
+                {
+                    collections.map( (c) => {
+                        return (
+                            <Card 
+                                key = {c.id}
+                                HREF="/collection/[id]"
+                                AS={`/collection/${c.id}`}
+                                SRC={c.coverImg}
+                                ALT=""
+                                engCL={c.titleENG}
+                                jpCL={c.titleJPN}
+                                YEAR={c.year}
+                            />
+                        )
+                    } )
+                }
+            </div>
+        </DefaultLayout>
+    </>
 }
 
 export const getStaticProps =  async () => {

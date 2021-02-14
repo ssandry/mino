@@ -1,52 +1,58 @@
-import { motion } from "framer-motion";
+import Head from "next/head";
 import DefaultLayout from "../../layouts/default";
+import { motion } from "framer-motion";
 
 const Collection = ( {collection} ) => {
-    return <DefaultLayout>
-        <div className="collection-main">
-            <div className="collection-h">
-                <div className="collection-name">
-                    <motion.div 
-                        className="imgabs" 
-                        layoutId={collection.coverImg}
-                        transition={{ duration: .55 }}
-                    >
-                        <img 
-                            src={collection.coverImg} 
-                            alt=""
-                        />
-                    </motion.div>
-                    <div>
-                        <h1 className="logo" >
-                            MI<span className="n">N</span>O /
-                        </h1>
-                        <h2> {collection.titleENG}</h2>
+    return <>
+        <Head>
+            <title>MINO | {collection.titleENG} </title>
+        </Head>
+        <DefaultLayout>
+            <div className="collection-main">
+                <div className="collection-h">
+                    <div className="collection-name">
+                        <motion.div 
+                            className="imgabs" 
+                            layoutId={collection.coverImg}
+                            transition={{ duration: .55 }}
+                        >
+                            <img 
+                                src={collection.coverImg} 
+                                alt=""
+                            />
+                        </motion.div>
+                        <div>
+                            <h1 className="logo" >
+                                MI<span className="n">N</span>O /
+                            </h1>
+                            <h2> {collection.titleENG}</h2>
+                        </div>
+                        <h5>{collection.by} {collection.release}</h5>
                     </div>
-                    <h5>{collection.by} {collection.release}</h5>
                 </div>
             </div>
-        </div>
-        <div className="collection-collage">
-            <img src={collection.collage} alt=""/>
-        </div>
-        <div className="line">
-            <div className="line-img"></div>
-        </div>
-        <div className="about">
-            <h6>The New collection <br/> S - J 2022</h6>
-            <h1>{ collection.about }</h1>
-            <div className="prod">
-                { collection.team.map( (t) => {
-                    return (
-                        <div key={t.name}>
-                            <span className="prof" >{t.prof}</span>
-                            <span className="name" >{t.name}</span>
-                        </div>
-                    )
-                } ) }
+            <div className="collection-collage">
+                <img src={collection.collage} alt=""/>
             </div>
-        </div>
-    </DefaultLayout>
+            <div className="line">
+                <div className="line-img"></div>
+            </div>
+            <div className="about">
+                <h6>The New collection <br/> S - J 2022</h6>
+                <h1>{ collection.about }</h1>
+                <div className="prod">
+                    { collection.team.map( (t) => {
+                        return (
+                            <div key={t.name}>
+                                <span className="prof" >{t.prof}</span>
+                                <span className="name" >{t.name}</span>
+                            </div>
+                        )
+                    } ) }
+                </div>
+            </div>
+        </DefaultLayout>
+    </>
 }
 
 export const getStaticProps = async (ctx) => {
