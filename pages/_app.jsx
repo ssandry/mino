@@ -1,6 +1,8 @@
 import Head from "next/head";
 import "../assets/sass/global.scss";
 
+import "aos/dist/aos.css";
+
 import { AnimateSharedLayout } from "framer-motion";
 
 import App from "next/app";

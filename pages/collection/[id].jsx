@@ -4,12 +4,12 @@ import { useEffect, useRef } from "react";
 
 import { motion } from "framer-motion";
 import Aos from "aos";
-import "aos/dist/aos.css";
 
 const Collection = ( {collection} ) => {
 
     useEffect( () => {
         Aos.init({ duration: 2000 })
+        Aos.refresh();
     }, [] )
 
     useEffect( () => {
@@ -53,6 +53,7 @@ const Collection = ( {collection} ) => {
                 data-aos-offset = "350"
                 data-aos-easing="ease-in-sine"
                 data-aos-duration = "1400"
+                data-aos-once = "true"
             >
                 <img 
                     src={collection.collage} 
@@ -64,12 +65,14 @@ const Collection = ( {collection} ) => {
                 data-aos="fade-down" 
                 data-aos-duration = "1800"
                 data-aos-offset = "650"
+                data-aos-delay = "300"
+                data-aos-once = "true"
             >
                 <div className="line-img"></div>
             </div>
             <div className="about">
-                <h6 data-aos = "fade-up" data-aos-duration = "2000" data-aos-offset = "450" >The New collection <br/> S - J 2022</h6>
-                <h1 data-aos = "fade-up" data-aos-duration = "2900" data-aos-offset = "350" >{ collection.about }</h1>
+                <h6 data-aos = "fade-up" data-aos-duration = "2000" data-aos-offset = "450" data-aos-delay = "250" data-aos-once = "true" >The New collection <br/> S - J 2022</h6>
+                <h1 data-aos = "fade-up" data-aos-duration = "2900" data-aos-offset = "350" data-aos-delay = "250" data-aos-once = "true" >{ collection.about }</h1>
                 <div className="prod">
                     { collection.team.map( (t) => {
                         return (
