@@ -1,8 +1,17 @@
 import Head from "next/head";
 import DefaultLayout from "../../layouts/default";
+import { useEffect, useRef } from "react";
+
 import { motion } from "framer-motion";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Collection = ( {collection} ) => {
+
+    useEffect( () => {
+        Aos.init({ duration: 2000 })
+    }, [] )
+
     return <>
         <Head>
             <title>MINO | {collection.titleENG} </title>
@@ -31,15 +40,25 @@ const Collection = ( {collection} ) => {
                     </div>
                 </div>
             </div>
-            <div className="collection-collage">
-                <img src={collection.collage} alt=""/>
+            <div 
+                className="collection-collage" 
+                id = "collection-collage" 
+                data-aos = "fade-up"
+                data-aos-offset = "350"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration = "1400"
+            >
+                <img 
+                    src={collection.collage} 
+                    alt=""
+                />
             </div>
-            <div className="line">
+            <div className="line" data-aos="fade-down" data-aos-duration = "1800">
                 <div className="line-img"></div>
             </div>
             <div className="about">
-                <h6>The New collection <br/> S - J 2022</h6>
-                <h1>{ collection.about }</h1>
+                <h6 data-aos = "fade-up" data-aos-duration = "1500" >The New collection <br/> S - J 2022</h6>
+                <h1 data-aos = "fade-up" data-aos-duration = "2400">{ collection.about }</h1>
                 <div className="prod">
                     { collection.team.map( (t) => {
                         return (
