@@ -64,17 +64,17 @@ const Collection = ( {collection} ) => {
                 className="line" 
                 id = "line"
                 data-aos="fade-down" 
-                data-aos-duration = "1800"
-                data-aos-offset = "650"
+                data-aos-duration = "2200"
+                data-aos-offset = "250"
                 data-aos-delay = "300"
                 data-aos-once = "true"
-                data-aos-anchor = "#collection-collage"
+                data-aos-anchor-placement="center-center"
             >
                 <div className="line-img"></div>
             </div>
             <div className="about">
-                <h6 data-aos = "fade-up" data-aos-duration = "2000" data-aos-offset = "450" data-aos-delay = "250" data-aos-once = "true" data-aos-anchor = "#line" >The New collection <br/> S - J 2022</h6>
-                <h1 data-aos = "fade-up" data-aos-duration = "2900" data-aos-offset = "350" data-aos-delay = "250" data-aos-once = "true" data-aos-anchor = "#line" >{ collection.about }</h1>
+                <h6 data-aos = "fade-up" data-aos-duration = "2200" data-aos-offset = "150" data-aos-delay = "100" data-aos-once = "true" data-aos-anchor-placement="center-center" >The New collection <br/> S - J 2022</h6>
+                <h1 data-aos = "fade-up" data-aos-duration = "3400" data-aos-offset = "50" data-aos-delay = "50" data-aos-once = "true" data-aos-anchor-placement="top-center" >{ collection.about }</h1>
                 <div className="prod">
                     { collection.team.map( (t) => {
                         return (
