@@ -8,8 +8,8 @@ import Aos from "aos";
 const Collection = ( {collection} ) => {
 
     useEffect( () => {
-        Aos.init({ duration: 2000 })
         Aos.refresh();
+        Aos.init({ duration: 2000 })
     }, [] )
 
     useEffect( () => {
