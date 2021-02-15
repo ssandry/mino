@@ -12,6 +12,12 @@ const Collection = ( {collection} ) => {
         Aos.init({ duration: 2000 })
     }, [] )
 
+    useEffect( () => {
+        const w = window;
+
+        console.log( w )
+    }, [] )
+
     return <>
         <Head>
             <title>MINO | {collection.titleENG} </title>
@@ -53,12 +59,17 @@ const Collection = ( {collection} ) => {
                     alt=""
                 />
             </div>
-            <div className="line" data-aos="fade-down" data-aos-duration = "1800">
+            <div 
+                className="line" 
+                data-aos="fade-down" 
+                data-aos-duration = "1800"
+                data-aos-offset = "650"
+            >
                 <div className="line-img"></div>
             </div>
             <div className="about">
-                <h6 data-aos = "fade-up" data-aos-duration = "1500" >The New collection <br/> S - J 2022</h6>
-                <h1 data-aos = "fade-up" data-aos-duration = "2400">{ collection.about }</h1>
+                <h6 data-aos = "fade-up" data-aos-duration = "2000" data-aos-offset = "450" >The New collection <br/> S - J 2022</h6>
+                <h1 data-aos = "fade-up" data-aos-duration = "2900" data-aos-offset = "350" >{ collection.about }</h1>
                 <div className="prod">
                     { collection.team.map( (t) => {
                         return (
