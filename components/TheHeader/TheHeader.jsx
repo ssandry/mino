@@ -20,21 +20,38 @@ const TheHeader = () => {
                     <ul>
                         <li>
                             <Link href="/">
-                                <a className={ router.pathname === "/team" ? "active" : "disactive" }>
+                                <a 
+                                    className={ 
+                                        router.pathname === "/team"
+                                        ? "active" : "disactive" 
+                                    }
+                                >
                                     Team
                                 </a>
                             </Link>
                         </li>
                         <li>
                             <Link href="/about">
-                                <a className={ router.pathname === "/about" ? "active" : "disactive" }>
+                                <a 
+                                    className={ 
+                                        router.pathname === "/about" 
+                                        ? "active" : "disactive" 
+                                    }
+                                >
                                     About
                                 </a>
                             </Link>
                         </li>
                         <li>
                             <Link href="/">
-                                <a className={ router.pathname === "/" ? "active" : "disactive" }>
+                                <a 
+                                    className={ 
+                                        router.pathname === "/" 
+                                        ||
+                                        router.pathname.split("/")[1] === "collection" 
+                                        ? "active" : "disactive" 
+                                    }
+                                >
                                     Collections
                                 </a>
                             </Link>
