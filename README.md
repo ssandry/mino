@@ -20,3 +20,19 @@ $npm install # or yarn
 ```sh
 $npm run dev # or yarn dev
 ```
+
+### api 
+
+**Launches the Python API**
+
+```sh
+$npm run api # or yarn api
+```
+
+### build 
+
+**Creates an out directory for the deployment**
+
+```sh
+$npm run build && $npm run start
+```
