@@ -10,3 +10,13 @@
 $git clone git+https://github.com/ssandry/mino.git
 $npm install # or yarn
 ```
+
+## Scripts
+
+### dev 
+
+**Launches the Python API & React**
+
+```sh
+$npm run dev # or yarn dev
+```
