@@ -104,12 +104,28 @@ const Collection = ( {collection} ) => {
                             />
                         </motion.div>
                         <div>
-                            <h1 className="logo" >
+                            <motion.h1 
+                                className="logo" 
+                                initial = {{ opacity: 0 }}
+                                animate = {{ opacity: 1 }}
+                                transition = {{ duration: 1, delay: .35 }}
+                            >
                                 MI<span className="n">N</span>O /
-                            </h1>
-                            <h2> {collection.titleENG}</h2>
+                            </motion.h1>
+                            <motion.h2
+                                initial = {{ opacity: 0 }}
+                                animate = {{ opacity: 1 }}
+                                transition = {{ duration: 1, delay: .55 }}
+                            > {collection.titleENG}
+                            </motion.h2>
                         </div>
-                        <h5>{collection.by} {collection.release}</h5>
+                        <motion.h5
+                            initial = {{ opacity: 0 }}
+                            animate = {{ opacity: 1 }}
+                            transition = {{ duration: 1, delay: .75 }}
+                        >
+                            {collection.by} {collection.release}
+                        </motion.h5>
                     </div>
                 </div>
             </div>
