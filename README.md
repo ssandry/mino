@@ -2,18 +2,21 @@
 
 # #Mino
 
-## To run the `dev` script, you need to have Python3 and Flask
+# Dependencies
 
-## Install
+## Node.js 
+## Python3 
+
+# Install
 
 ```sh
 $git clone git+https://github.com/ssandry/mino.git
 $npm install # or yarn
 ```
 
-## Scripts
+# Scripts
 
-### dev 
+## dev 
 
 **Launches the Python API & React**
 
@@ -21,7 +24,7 @@ $npm install # or yarn
 $npm run dev # or yarn dev
 ```
 
-### api 
+## api 
 
 **Launches the Python API**
 
@@ -29,7 +32,7 @@ $npm run dev # or yarn dev
 $npm run api # or yarn api
 ```
 
-### build 
+## build 
 
 **Creates an out directory for the deployment**
 
