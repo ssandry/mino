@@ -12,16 +12,46 @@ const Collection = ( {collection} ) => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.core.globals("ScrollTrigger", ScrollTrigger);
 
+    const collageRef = useRef(null)
+    const lineRef = useRef(null)
+
     useEffect(() => {
-        gsap.to("#collection-collage", {
-        x: 100,
-        duration: 2,
-        ease: "bounce",
-        delay: 1,
-        scrollTrigger: {
-            trigger: "#collection-collage"
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                id: "trigger1",
+                trigger: collageRef.current,
+                start: "top bottom",
+                end: "top top",
+                scrub: true
+            }
+        })
+
+        tl.fromTo(
+            collageRef.current,
+            {
+              opacity: 0,
+              x: 500
+            },
+            {
+              opacity: 1,
+              x: 0
+            }
+        );
+
+        return () => {
+            tl.pause(0).kill(true);
+            ScrollTrigger.getById("trigger1").kill(true);
         }
-    });
+
+        // gsap.to(collageRef.current, {
+        //     x: 100,
+        //     duration: 2,
+        //     ease: "bounce",
+        //     delay: 1,
+        //     scrollTrigger: { trigger: collageRef.current }
+        // });
+
     }, []);
 
     return <>
@@ -55,6 +85,7 @@ const Collection = ( {collection} ) => {
             <div 
                 className="collection-collage" 
                 id = "collection-collage" 
+                ref = { collageRef }
             >
                 <img 
                     src={collection.collage} 
@@ -64,10 +95,11 @@ const Collection = ( {collection} ) => {
             <div 
                 className="line" 
                 id = "line"
+                ref = { lineRef }
             >
                 <div className="line-img"></div>
             </div>
-            <div className="about">
+            <div className="about" id="about" >
                 <h6>The New collection <br/> S - J 2022</h6>
                 <h1>{ collection.about }</h1>
                 <div className="prod">
