@@ -7,15 +7,17 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-const Collection = ( {collection} ) => {
+gsap.registerPlugin(ScrollTrigger);
+gsap.core.globals("ScrollTrigger", ScrollTrigger);
 
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.core.globals("ScrollTrigger", ScrollTrigger);
+const Collection = ( {collection} ) => {
 
     const collageRef = useRef(null)
     const lineRef = useRef(null)
 
     useEffect(() => {
+
+        ScrollTrigger.refresh()
 
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -40,19 +42,48 @@ const Collection = ( {collection} ) => {
         );
 
         return () => {
+
             tl.pause(0).kill(true);
             ScrollTrigger.getById("trigger1").kill(true);
+            gsap.set(collageRef.current, {clearProps: true});
+
         }
 
-        // gsap.to(collageRef.current, {
-        //     x: 100,
-        //     duration: 2,
-        //     ease: "bounce",
-        //     delay: 1,
-        //     scrollTrigger: { trigger: collageRef.current }
-        // });
+    }, [] );
 
-    }, []);
+    useEffect( () => {
+
+        ScrollTrigger.refresh()
+
+        const tl2 = gsap.timeline({
+            scrollTrigger: {
+                id: "trigger2",
+                trigger: lineRef.current,
+                start: "top bottom",
+                end: "top top",
+                scrub: true
+            }
+        })
+
+        tl2.fromTo(
+            lineRef.current,
+            {
+              opacity: 0,
+              x: -200
+            },
+            {
+              opacity: 1,
+              x: 0
+            }
+        );
+
+        return () => {
+            tl2.pause(0).kill(true);
+            ScrollTrigger.getById("trigger2").kill(true);
+            gsap.set(lineRef.current, {clearProps: true});
+        }
+
+    }, [] )
 
     return <>
         <Head>
