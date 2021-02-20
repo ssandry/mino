@@ -103,9 +103,11 @@
 .collection-collage {
     width: 100%;
     margin-top: 80px;
+    min-height: 900px;
 
     @media screen and (max-width: 700px) {
         margin-top: -60px;
+        min-height: 0;
     }
 
     img {
