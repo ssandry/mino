@@ -3,20 +3,26 @@ import DefaultLayout from "../../layouts/default";
 import { useEffect, useRef } from "react";
 
 import { motion } from "framer-motion";
-import Aos from "aos";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Collection = ( {collection} ) => {
 
-    useEffect( () => {
-        Aos.refresh();
-        Aos.init({ duration: 2000 })
-    }, [] )
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.core.globals("ScrollTrigger", ScrollTrigger);
 
-    useEffect( () => {
-        const w = window;
-
-        console.log( w )
-    }, [] )
+    useEffect(() => {
+        gsap.to("#collection-collage", {
+        x: 100,
+        duration: 2,
+        ease: "bounce",
+        delay: 1,
+        scrollTrigger: {
+            trigger: "#collection-collage"
+        }
+    });
+    }, []);
 
     return <>
         <Head>
@@ -49,11 +55,6 @@ const Collection = ( {collection} ) => {
             <div 
                 className="collection-collage" 
                 id = "collection-collage" 
-                data-aos = "fade-up"
-                data-aos-offset = "350"
-                data-aos-easing="ease-in-sine"
-                data-aos-duration = "1400"
-                data-aos-once = "true"
             >
                 <img 
                     src={collection.collage} 
@@ -63,18 +64,12 @@ const Collection = ( {collection} ) => {
             <div 
                 className="line" 
                 id = "line"
-                data-aos="fade-down" 
-                data-aos-duration = "2200"
-                data-aos-offset = "250"
-                data-aos-delay = "300"
-                data-aos-once = "true"
-                data-aos-anchor-placement="center-center"
             >
                 <div className="line-img"></div>
             </div>
             <div className="about">
-                <h6 data-aos = "fade-up" data-aos-duration = "2200" data-aos-offset = "150" data-aos-delay = "100" data-aos-once = "true" data-aos-anchor-placement="center-center" >The New collection <br/> S - J 2022</h6>
-                <h1 data-aos = "fade-up" data-aos-duration = "3400" data-aos-offset = "50" data-aos-delay = "50" data-aos-once = "true" data-aos-anchor-placement="top-center" >{ collection.about }</h1>
+                <h6>The New collection <br/> S - J 2022</h6>
+                <h1>{ collection.about }</h1>
                 <div className="prod">
                     { collection.team.map( (t) => {
                         return (
