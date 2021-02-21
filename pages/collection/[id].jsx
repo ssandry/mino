@@ -1,12 +1,15 @@
+// React && Next.JS
 import Head from "next/head";
 import DefaultLayout from "../../layouts/default";
 import { useEffect, useRef } from "react";
 
+// Animations 
 import { motion } from "framer-motion";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
+// Register ScrollTrigger for use on GSAP 
 gsap.registerPlugin(ScrollTrigger);
 gsap.core.globals("ScrollTrigger", ScrollTrigger);
 
