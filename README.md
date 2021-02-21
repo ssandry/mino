@@ -4,8 +4,15 @@
 
 # Dependencies
 
-## Node.js 
-## Python3 
+<li>Python3</li>
+<li>Node.js</li>
+
+# Check dependencies versions
+
+```sh
+$python3 -version
+$node -v
+```
 
 # Install
 
