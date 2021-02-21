@@ -18,6 +18,7 @@ $node -v
 
 ```sh
 $git clone git+https://github.com/ssandry/mino.git
+$cd mino
 $npm install # or yarn
 ```
 
