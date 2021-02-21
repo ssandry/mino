@@ -2,10 +2,13 @@
 
 # #Mino
 
+**Deployed thanks to [Vercel]** <br>
+**Live preview [Mino]** 
+
 # Dependencies
 
-<li>Python3</li>
-<li>Node.js</li>
+- [Python3] - A high-level general-purpose programming language
+- [NodeJS] - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
 # Check dependencies versions
 
@@ -47,3 +50,8 @@ $npm run api # or yarn api
 ```sh
 $npm run build && $npm run start
 ```
+
+[Python3]: <https://www.python.org/>
+[NodeJS]: <https://nodejs.org/en/>
+[Mino]: <https://mino-ssandry.vercel.app/>
+[Vercel]: <https://vercel.com/home>
