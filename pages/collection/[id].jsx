@@ -33,7 +33,7 @@ const Collection = ( {collection} ) => {
             collageRef.current,
             {
               opacity: 0,
-              x: 500
+              x: 200
             },
             {
               opacity: 1,
@@ -69,7 +69,7 @@ const Collection = ( {collection} ) => {
             lineRef.current,
             {
               opacity: 0,
-              x: -200
+              x: -100
             },
             {
               opacity: 1,
@@ -78,9 +78,14 @@ const Collection = ( {collection} ) => {
         );
 
         return () => {
+
+            // ComponentDidUnmount
+            // Remove timeline when component did unmount
+
             tl2.pause(0).kill(true);
             ScrollTrigger.getById("trigger2").kill(true);
             gsap.set(lineRef.current, {clearProps: true});
+
         }
 
     }, [] )
@@ -108,21 +113,21 @@ const Collection = ( {collection} ) => {
                                 className="logo" 
                                 initial = {{ opacity: 0 }}
                                 animate = {{ opacity: 1 }}
-                                transition = {{ duration: 1, delay: .35 }}
+                                transition = {{ duration: 1, delay: .25 }}
                             >
                                 MI<span className="n">N</span>O /
                             </motion.h1>
                             <motion.h2
                                 initial = {{ opacity: 0 }}
                                 animate = {{ opacity: 1 }}
-                                transition = {{ duration: 1, delay: .55 }}
+                                transition = {{ duration: 1, delay: .35 }}
                             > {collection.titleENG}
                             </motion.h2>
                         </div>
                         <motion.h5
                             initial = {{ opacity: 0 }}
                             animate = {{ opacity: 1 }}
-                            transition = {{ duration: 1, delay: .75 }}
+                            transition = {{ duration: 1, delay: .65 }}
                         >
                             {collection.by} {collection.release}
                         </motion.h5>
