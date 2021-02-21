@@ -66,8 +66,7 @@ const Collection = ( {collection} ) => {
             scrollTrigger: {
                 id: "trigger1",
                 trigger: collageRef.current,
-                start: "top center+=50",
-                //end: "top top",
+                start: "top bottom-=100",
                 scrub: true
             }
         })
