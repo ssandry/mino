@@ -24,7 +24,8 @@
     "JavaScript",
     "GSAP",
     "Framer Motion",
-    "React"
+    "React",
+    "ScrollTrigger"
   ],
   "author": "@ssandry",
   "license": "ISC",
