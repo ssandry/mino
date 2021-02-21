@@ -15,6 +15,46 @@ const Collection = ( {collection} ) => {
     const collageRef = useRef(null)
     const lineRef = useRef(null)
 
+    // Collection Name Parralax ScrollTrigger
+    useEffect( () => {
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                id: "trigger1",
+                trigger: "#h1",
+                start: "top center+=50",
+                //end: "top top",
+                scrub: true
+            }
+
+        })
+
+        tl.fromTo(
+            "#h1",
+            { y: 5 },
+            { y: -40 }
+        );
+
+        const tl2 = gsap.timeline({
+            scrollTrigger: {
+                id: "trigger1",
+                trigger: "#h1",
+                start: "top center+=50",
+                //end: "top top",
+                scrub: true
+            }
+
+        })
+
+        tl2.fromTo(
+            "#h5",
+            { y: 0 },
+            { y: -20 }
+        );
+
+    }, [] )
+
+    // Mount collection collage ScrollTrigger
     useEffect(() => {
 
         ScrollTrigger.refresh()
@@ -51,6 +91,7 @@ const Collection = ( {collection} ) => {
 
     }, [] );
 
+    // Mount line ScrollTrigger
     useEffect( () => {
 
         ScrollTrigger.refresh()
@@ -108,7 +149,7 @@ const Collection = ( {collection} ) => {
                                 alt=""
                             />
                         </motion.div>
-                        <div>
+                        <div id = "h1">
                             <motion.h1 
                                 className="logo" 
                                 initial = {{ opacity: 0 }}
@@ -128,6 +169,7 @@ const Collection = ( {collection} ) => {
                             initial = {{ opacity: 0 }}
                             animate = {{ opacity: 1 }}
                             transition = {{ duration: 1, delay: .65 }}
+                            id = "h5"
                         >
                             {collection.by} {collection.release}
                         </motion.h5>
