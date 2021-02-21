@@ -10,6 +10,12 @@
 - [Python3] - A high-level general-purpose programming language
 - [NodeJS] - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
+# Used animation libraries
+
+- [FramerMotion]
+- [GSAP]
+- [GSAP/ScrollTrigger]
+
 # Check dependencies versions
 
 ```sh
@@ -55,3 +61,6 @@ $npm run build && $npm run start
 [NodeJS]: <https://nodejs.org/en/>
 [Mino]: <https://mino-ssandry.vercel.app/>
 [Vercel]: <https://vercel.com/home>
+[FramerMotion]: <https://www.framer.com/motion/>
+[GSAP]: <https://greensock.com/gsap/>
+[GSAP/ScrollTrigger]: <https://greensock.com/scrolltrigger/>
