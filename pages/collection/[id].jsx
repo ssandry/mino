@@ -57,6 +57,28 @@ const Collection = ( {collection} ) => {
 
     }, [] )
 
+    //Collection cover ScrollTrigger
+    useEffect( () => {
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                id: "trigger1",
+                trigger: ".imgabs img",
+                start: "top",
+                //end: "top top",
+                scrub: true
+            }
+
+        })
+
+        tl.fromTo(
+            ".imgabs img",
+            { y: 0, x: 0, opacity: 1 },
+            { y: 40, x: -10, opacity: 0 }
+        );
+
+    }, [] )
+
     // Mount collection collage ScrollTrigger
     useEffect(() => {
 
