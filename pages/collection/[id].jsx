@@ -23,10 +23,9 @@ const Collection = ( {collection} ) => {
 
         const tl = gsap.timeline({
             scrollTrigger: {
-                id: "trigger1",
+                id: "trigger0",
                 trigger: "#h1",
                 start: "top center+=50",
-                //end: "top top",
                 scrub: true
             }
 
@@ -62,19 +61,17 @@ const Collection = ( {collection} ) => {
 
         const tl = gsap.timeline({
             scrollTrigger: {
-                id: "trigger1",
+                id: "trigger8",
                 trigger: ".imgabs img",
                 start: "top",
-                //end: "top top",
                 scrub: true
             }
-
         })
 
         tl.fromTo(
             ".imgabs img",
-            { y: 0, x: 0, opacity: 1 },
-            { y: 40, x: -10, opacity: 0 }
+            { y: 0, x: 0, scale: 1 },
+            { y: 100, x: -10, scale: 0.92 }
         );
 
     }, [] )
@@ -86,7 +83,7 @@ const Collection = ( {collection} ) => {
 
         const tl = gsap.timeline({
             scrollTrigger: {
-                id: "trigger1",
+                id: "trigger3",
                 trigger: collageRef.current,
                 start: "top bottom-=100",
                 scrub: true
@@ -95,20 +92,14 @@ const Collection = ( {collection} ) => {
 
         tl.fromTo(
             collageRef.current,
-            {
-              opacity: 0,
-              x: 200
-            },
-            {
-              opacity: 1,
-              x: 0
-            }
+            { opacity: 0, x: 200, scale: 0.9, y: 50 },
+            { opacity: 1, x: 0, scale: 1, y: 0 }
         );
 
         return () => {
 
             tl.pause(0).kill(true);
-            ScrollTrigger.getById("trigger1").kill(true);
+            ScrollTrigger.getById("trigger3").kill(true);
             gsap.set(collageRef.current, {clearProps: true});
 
         }
@@ -122,7 +113,7 @@ const Collection = ( {collection} ) => {
 
         const tl2 = gsap.timeline({
             scrollTrigger: {
-                id: "trigger2",
+                id: "trigger4",
                 trigger: lineRef.current,
                 start: "top bottom",
                 end: "top top",
@@ -148,7 +139,7 @@ const Collection = ( {collection} ) => {
             // Remove timeline when component did unmount
 
             tl2.pause(0).kill(true);
-            ScrollTrigger.getById("trigger2").kill(true);
+            ScrollTrigger.getById("trigger4").kill(true);
             gsap.set(lineRef.current, {clearProps: true});
 
         }
