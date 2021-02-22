@@ -3,7 +3,7 @@
 # #Mino
 
 **Deployed thanks to [Vercel]** <br>
-**Live preview [Mino]** 
+**Live preview [Mino]**. **[API]**
 
 # Dependencies
 
@@ -64,3 +64,4 @@ $npm run build && $npm run start
 [FramerMotion]: <https://www.framer.com/motion/>
 [GSAP]: <https://greensock.com/gsap/>
 [GSAP/ScrollTrigger]: <https://greensock.com/scrolltrigger/>
+[API]: <https://mino-api-please.herokuapp.com/>
