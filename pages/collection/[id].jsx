@@ -251,7 +251,7 @@ const Collection = ( {collection} ) => {
                 <Anchor
                     to = "collection-main"
                     smooth = {true}
-                    duration = {2400}
+                    duration = {2600}
                 >
                     <span className="two">
                         <span>G</span>
