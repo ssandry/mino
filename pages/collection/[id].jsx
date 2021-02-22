@@ -74,7 +74,7 @@ const Collection = ( {collection} ) => {
             tl.fromTo(
                 ".imgabs img",
                 { y: 0, x: 0, scale: 1, opacity: 1 },
-                { y: 100, x: -10, scale: 0.92, opacity: 0.5 }
+                { y: 100, x: -10, scale: 0.96, opacity: 0.5 }
             );
         }, 500 )
 
