@@ -1,9 +1,11 @@
 // React && Next.JS
 import Head from "next/head";
+import Link from "next/link";
 import DefaultLayout from "../../layouts/default";
 import { useEffect, useRef } from "react";
 
 // Animations 
+import { Link as Anchor } from "react-scroll";
 import { motion } from "framer-motion";
 
 import gsap from "gsap";
@@ -221,6 +223,46 @@ const Collection = ( {collection} ) => {
                         )
                     } ) }
                 </div>
+            </div>
+            <div className="anchors">
+                <Link href = "/" >
+                    <a>
+                        <span>G</span>
+                        <span>o</span>
+                        <span> </span>
+                        <span>t</span>
+                        <span>o</span>
+                        <span> </span>
+                        <span>c</span>
+                        <span>o</span>
+                        <span>l</span>
+                        <span>l</span>
+                        <span>e</span>
+                        <span>c</span>
+                        <span>t</span>
+                        <span>i</span>
+                        <span>o</span>
+                        <span>n</span>
+                        <span>s</span>
+                    </a>
+                </Link>
+                <Anchor
+                    to = "collection-main"
+                    smooth = {true}
+                    duration = {2400}
+                >
+                    <a className="two">
+                        <span>G</span>
+                        <span>o</span>
+                        <span> </span>
+                        <span>t</span>
+                        <span>o</span>
+                        <span> </span>
+                        <span>t</span>
+                        <span>o</span>
+                        <span>p</span>
+                    </a>
+                </Anchor>
             </div>
         </DefaultLayout>
     </>

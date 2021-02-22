@@ -191,3 +191,44 @@
         }
     }
 }
+
+.anchors {
+    height: 70px;
+    box-sizing: border-box;
+    padding-top: 50px;
+
+    .two {
+        margin-left: 10px;
+    }
+
+    a {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        cursor: pointer;
+
+        span {
+            color: #616161;
+            transition-duration: .85s;
+
+            &:nth-child(1), &:nth-child(4), &:nth-child(7), &:nth-child(12) {
+                transition-duration: .45s;
+            }
+
+            &:nth-child(5), &:nth-child(10), &:nth-child(16) {
+                transition-duration: .25s;
+            }
+
+            &:nth-child(2), &:nth-child(9), &:nth-child(15) {
+                transition-duration: .65s;
+            }
+        }
+
+        &:hover span {
+            color: #c5c5c5;
+        }
+
+    }
+}
