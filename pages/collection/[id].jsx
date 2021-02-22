@@ -265,6 +265,17 @@ const Collection = ( {collection} ) => {
                         <span>p</span>
                     </span>
                 </Anchor>
+                <Link href = "https://github.com/ssandry/mino" >
+                    <a className = "two">
+                        <span>G</span>
+                        <span>i</span>
+                        <span>t</span>
+                        <span>H</span>
+                        <span>u</span>
+                        <span>b</span>
+                        <span>☂️</span>
+                    </a>
+                </Link>
             </div>
         </DefaultLayout>
     </>
