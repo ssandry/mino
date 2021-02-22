@@ -151,7 +151,7 @@ const Collection = ( {collection} ) => {
             <title>MINO | {collection.titleENG} </title>
         </Head>
         <DefaultLayout>
-            <div className="collection-main">
+            <div className="collection-main" id = "collection-main">
                 <div className="collection-h">
                     <div className="collection-name">
                         <motion.div 
