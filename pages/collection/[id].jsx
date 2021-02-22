@@ -61,20 +61,22 @@ const Collection = ( {collection} ) => {
     //Collection cover ScrollTrigger
     useEffect( () => {
 
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                id: "trigger8",
-                trigger: ".imgabs img",
-                start: "top",
-                scrub: true
-            }
-        })
-
-        tl.fromTo(
-            ".imgabs img",
-            { y: 0, x: 0, scale: 1 },
-            { y: 100, x: -10, scale: 0.92 }
-        );
+        setTimeout( () => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    id: "trigger8",
+                    trigger: ".imgabs img",
+                    start: "top",
+                    scrub: true
+                }
+            })
+    
+            tl.fromTo(
+                ".imgabs img",
+                { y: 0, x: 0, scale: 1, opacity: 1 },
+                { y: 100, x: -10, scale: 0.92, opacity: 0.5 }
+            );
+        }, 500 )
 
     }, [] )
 
@@ -94,8 +96,8 @@ const Collection = ( {collection} ) => {
 
         tl.fromTo(
             collageRef.current,
-            { opacity: 0, x: 200, scale: 0.9, y: 50 },
-            { opacity: 1, x: 0, scale: 1, y: 0 }
+            { opacity: 0, x: 100, y: 100 },
+            { opacity: 1, x: 0, y: 0 }
         );
 
         return () => {
@@ -251,7 +253,7 @@ const Collection = ( {collection} ) => {
                     smooth = {true}
                     duration = {2400}
                 >
-                    <a className="two">
+                    <span className="two">
                         <span>G</span>
                         <span>o</span>
                         <span> </span>
@@ -261,7 +263,7 @@ const Collection = ( {collection} ) => {
                         <span>t</span>
                         <span>o</span>
                         <span>p</span>
-                    </a>
+                    </span>
                 </Anchor>
             </div>
         </DefaultLayout>
