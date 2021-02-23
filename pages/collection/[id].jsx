@@ -20,10 +20,13 @@ const Collection = ( {collection} ) => {
     const collageRef = useRef(null)
     const lineRef = useRef(null)
 
+    const transitionValue = .05
+
     // Collection Name Parralax ScrollTrigger
     useEffect( () => {
 
         const tl = gsap.timeline({
+
             scrollTrigger: {
                 id: "trigger0",
                 trigger: "#h1",
@@ -73,8 +76,8 @@ const Collection = ( {collection} ) => {
     
             tl.fromTo(
                 ".imgabs img",
-                { y: 0, x: 0, scale: 1, opacity: 1 },
-                { y: 100, x: -10, scale: 0.96, opacity: 0.5 }
+                { y: 0, x: 0, scale: 1, opacity: 1, skewX: 0, skewY: 0, transitionDuration: transitionValue },
+                { y: 60, x: -10, scale: 0.96, opacity: 0.5, skewX: 0.105, skewY: 0.105, transitionDuration: transitionValue }
             );
         }, 500 )
 
@@ -96,8 +99,8 @@ const Collection = ( {collection} ) => {
 
         tl.fromTo(
             collageRef.current,
-            { opacity: 0, x: 100, y: 100 },
-            { opacity: 1, x: 0, y: 0 }
+            { opacity: 0, x: 50, y: 50, scale: 0.96, skewX: -0.25, skewY: -0.5, transitionDuration: transitionValue },
+            { opacity: 1, x: 0, y: 0, scale: 1, skewX: 0, skewY: 0, transitionDuration: transitionValue }
         );
 
         return () => {
@@ -127,14 +130,8 @@ const Collection = ( {collection} ) => {
 
         tl2.fromTo(
             lineRef.current,
-            {
-              opacity: 0,
-              x: -100
-            },
-            {
-              opacity: 1,
-              x: 0
-            }
+            { opacity: 0, x: -40, skewX: 2, skewY: 1, transitionDuration: transitionValue },
+            { opacity: 1, x: 0, skewX: 0, skewY: 0, transitionDuration: transitionValue}
         );
 
         return () => {
