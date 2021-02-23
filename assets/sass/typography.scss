@@ -77,9 +77,7 @@ h5 {
     color: #FFFFFF;
 
     @media screen and (max-width: 700px) {
-        font-family: Bodoni Moda;
         font-style: normal;
-        font-weight: 500;
         font-size: 14px;
         line-height: 21px;
         text-align: center;
@@ -99,12 +97,9 @@ h6 {
     color: #FFFFFF;
 
     @media screen and (max-width: 700px) {
-        font-family: Roboto;
-        font-style: normal;
         font-weight: 500;
         font-size: 14px;
         line-height: 16px;
-        text-transform: uppercase;
 
         color: #BFBFBF;
     }
