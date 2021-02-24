@@ -65,6 +65,7 @@ const Collection = ( {collection} ) => {
     useEffect( () => {
 
         setTimeout( () => {
+            
             const tl = gsap.timeline({
                 scrollTrigger: {
                     id: "trigger8",
@@ -130,7 +131,7 @@ const Collection = ( {collection} ) => {
 
         tl2.fromTo(
             lineRef.current,
-            { opacity: 0, x: -40, skewX: 2, skewY: 1, transitionDuration: transitionValue },
+            { opacity: 0, x: -80, skewX: 2, skewY: 1, transitionDuration: transitionValue },
             { opacity: 1, x: 0, skewX: 0, skewY: 0, transitionDuration: transitionValue}
         );
 
