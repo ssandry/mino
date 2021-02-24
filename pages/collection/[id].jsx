@@ -158,7 +158,7 @@ const Collection = ( {collection} ) => {
                     <div className="collection-name">
                         <motion.div 
                             className="imgabs" 
-                            layoutId={collection.coverImg}
+                            layoutId={ collection.coverImg }
                             transition={{ duration: .55 }}
                         >
                             <img 
@@ -166,27 +166,27 @@ const Collection = ( {collection} ) => {
                                 alt=""
                             />
                         </motion.div>
-                        <div id = "h1">
+                        <div id="h1">
                             <motion.h1 
-                                className="logo" 
-                                initial = {{ opacity: 0 }}
-                                animate = {{ opacity: 1 }}
-                                transition = {{ duration: 1, delay: .25 }}
+                                className   ="logo" 
+                                initial     ={{ opacity: 0 }}
+                                animate     ={{ opacity: 1 }}
+                                transition  ={{ duration: 1, delay: .25 }}
                             >
                                 MI<span className="n">N</span>O /
                             </motion.h1>
                             <motion.h2
-                                initial = {{ opacity: 0 }}
-                                animate = {{ opacity: 1 }}
-                                transition = {{ duration: 1, delay: .35 }}
+                                initial     ={{ opacity: 0 }}
+                                animate     ={{ opacity: 1 }}
+                                transition  ={{ duration: 1, delay: .35 }}
                             > {collection.titleENG}
                             </motion.h2>
                         </div>
                         <motion.h5
-                            initial = {{ opacity: 0 }}
-                            animate = {{ opacity: 1 }}
-                            transition = {{ duration: 1, delay: .65 }}
-                            id = "h5"
+                            initial     ={{ opacity: 0 }}
+                            animate     ={{ opacity: 1 }}
+                            transition  ={{ duration: 1, delay: .65 }}
+                            id          = "h5"
                         >
                             {collection.by} {collection.release}
                         </motion.h5>
@@ -195,8 +195,8 @@ const Collection = ( {collection} ) => {
             </div>
             <div 
                 className="collection-collage" 
-                id = "collection-collage" 
-                ref = { collageRef }
+                id="collection-collage" 
+                ref={ collageRef }
             >
                 <img 
                     src={collection.collage} 
@@ -205,8 +205,8 @@ const Collection = ( {collection} ) => {
             </div>
             <div 
                 className="line" 
-                id = "line"
-                ref = { lineRef }
+                id="line"
+                ref={ lineRef }
             >
                 <div className="line-img"></div>
             </div>
@@ -217,15 +217,15 @@ const Collection = ( {collection} ) => {
                     { collection.team.map( (t) => {
                         return (
                             <div key={t.name}>
-                                <span className="prof" >{t.prof}</span>
-                                <span className="name" >{t.name}</span>
+                                <span className="prof" >{ t.prof }</span>
+                                <span className="name" >{ t.name }</span>
                             </div>
                         )
                     } ) }
                 </div>
             </div>
             <div className="anchors">
-                <Link href = "/" >
+                <Link href="/" >
                     <a>
                         <span>G</span>
                         <span>o</span>
@@ -247,9 +247,9 @@ const Collection = ( {collection} ) => {
                     </a>
                 </Link>
                 <Anchor
-                    to = "collection-main"
-                    smooth = {true}
-                    duration = {2600}
+                    to="collection-main"
+                    smooth={ true }
+                    duration={ 2600 }
                 >
                     <span className="two">
                         <span>G</span>
@@ -263,8 +263,8 @@ const Collection = ( {collection} ) => {
                         <span>p</span>
                     </span>
                 </Anchor>
-                <Link href = "https://github.com/ssandry/mino" >
-                    <a className = "two">
+                <Link href="https://github.com/ssandry/mino" >
+                    <a className="two">
                         <span>G</span>
                         <span>i</span>
                         <span>t</span>
