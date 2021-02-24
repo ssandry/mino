@@ -15,7 +15,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 gsap.core.globals("ScrollTrigger", ScrollTrigger);
 
-const Collection = ( {collection} ) => {
+const Collection = ({ collection }) => {
 
     const collageRef = useRef(null)
     const lineRef = useRef(null)
