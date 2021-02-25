@@ -101,7 +101,7 @@ const Collection = ({ collection }) => {
 
         tl.fromTo(
             collageRef.current,
-            { opacity: 0, x: 50, y: 50, scale: 0.96, skewX: -0.25, skewY: -0.5, transitionDuration: transitionValue },
+            { opacity: 0, x: 100, y: 50, scale: 0.96, skewX: -0.45, skewY: -0.75, transitionDuration: transitionValue },
             { opacity: 1, x: 0, y: 0, scale: 1, skewX: 0, skewY: 0, transitionDuration: transitionValue }
         );
 
