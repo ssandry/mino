@@ -7,6 +7,9 @@ import Card from "../components/Card/Card";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
+// Framer 
+import { motion } from "framer-motion";
+
 // Register ScrollTrigger for use on GSAP 
 gsap.registerPlugin(ScrollTrigger);
 gsap.core.globals("ScrollTrigger", ScrollTrigger);
@@ -59,16 +62,37 @@ const IndexPage = ( { collections } ) => {
             <title>MINO Collections</title>
         </Head>
         <DefaultLayout>
-            <div className="headerIndex">
-                <h1 className="logo" id="logo" >
-                    <span id="h1-top" style={{ display: "inline-block" }} >MI<span className="n">N</span>O </span>
-                    <span id="h1-bot" style={{ display: "inline-block", whiteSpace: "pre" }}> Collections</span>
+            <motion.div 
+                className="headerIndex" 
+                initial={{ opacity: 0 }} 
+                animate={{ opacity: 1 }} 
+                exit={{ opacity: 0 }} 
+                transition={{ duration: 1.25 }}
+            >
+                <h1 
+                    className="logo" 
+                    id="logo"
+                >
+                    <span 
+                        id="h1-top" 
+                        style={{ display: "inline-block" }} 
+                    >MI<span className="n">N</span>O </span>
+                    <span 
+                        id="h1-bot" 
+                        style={{ display: "inline-block", whiteSpace: "pre" }}
+                    > Collections</span>
                 </h1>
                 <p id="h1-about" >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor.
                 </p>
-            </div>
-            <div id="collections-grid">
+            </motion.div>
+            <motion.div 
+                id="collections-grid"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1.25, delay: .5 }}
+            >
                 {
                     collections.map( (c) => {
                         return (
@@ -85,7 +109,7 @@ const IndexPage = ( { collections } ) => {
                         )
                     } )
                 }
-            </div>
+            </motion.div>
         </DefaultLayout>
     </>
 }
