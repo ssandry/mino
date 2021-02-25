@@ -9,6 +9,7 @@
     "maintained node versions"
   ],
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \" python3 ./api/app/__init__.py \" \" next \" ",
     "api": "python3 ./api/app/__init__.py",
     "build": "next build",
@@ -27,7 +28,7 @@
     "React",
     "ScrollTrigger"
   ],
-  "author": "@ssandry",
+  "author": "@ssandry <https://github.com/ssandry> <seva007@hotmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ssandry/mino/issues"
