@@ -1,5 +1,8 @@
+$mainFont: "Bodoni Moda", serif;
+$secondFont: "Roboto", sans-serif;
+
 h1 {
-    font-family: "Bodoni Moda", serif;
+    font-family: $mainFont;
     font-style: normal;
     font-weight: bold;
     font-size: 70px;
@@ -31,7 +34,7 @@ h1 {
 }
 
 h2 {
-    font-family: "Roboto", sans-serif;
+    font-family: $secondFont;
     font-style: normal;
     font-weight: bold;
     font-size: 54px;
@@ -50,7 +53,7 @@ h2 {
 }
 
 h3 {
-    font-family: "Roboto", sans-serif;
+    font-family: $secondFont;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -61,7 +64,7 @@ h3 {
 }
 
 h4 {
-    font-family: "Roboto", sans-serif;
+    font-family: $secondFont;
     font-style: normal;
     font-weight: 900;
     font-size: 36px;
@@ -72,7 +75,7 @@ h4 {
 }
 
 h5 {
-    font-family: "Bodoni Moda";
+    font-family: $mainFont;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -90,7 +93,7 @@ h5 {
 }
 
 h6 {
-    font-family: "Roboto";
+    font-family: $secondFont;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -110,6 +113,6 @@ h6 {
 }
 
 p, i, a, div {
-    font-family: "Roboto", sans-serif;
+    font-family: $secondFont;
     color: #C9C9C9;
 }
