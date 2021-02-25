@@ -2,8 +2,8 @@
 
 # #Mino
 
-**Deployed thanks to [Vercel]** <br>
-**Live preview [Mino]**.
+**Live preview [Mino]**. <br>
+**Deployed thanks to [Vercel]**
 
 # Dependencies
 
