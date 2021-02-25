@@ -1,3 +1,5 @@
+@import "../env.scss";
+
 .aboutHeader {
     height: 514px;
     display: flex;
@@ -18,7 +20,7 @@
         text-align: center;
 
         @media screen and (max-width: 600px) {
-            font-family: Roboto;
+            font-family: $secondFont;
             font-style: normal;
             font-weight: 500;
             font-size: 12px;
@@ -35,7 +37,7 @@
         width: 60vw;
         max-width: 476px;
         text-align: center;
-        font-family: Roboto;
+        font-family: $secondFont;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -44,7 +46,7 @@
         color: #4B4B4B;
 
         @media screen and (max-width: 600px) {
-            font-family: Roboto;
+            font-family: $secondFont;
             font-style: normal;
             font-weight: normal;
             font-size: 12px;
@@ -60,7 +62,7 @@
     .p-l {
         width: 268px;
         text-align: center;
-        font-family: Roboto;
+        font-family: $secondFont;
         font-style: normal;
         font-weight: normal;
         font-size: 12px;
@@ -69,7 +71,7 @@
         color: #A2A2A2;
 
         @media screen and (max-width: 600px) {
-            font-family: Roboto;
+            font-family: $secondFont;
             font-style: normal;
             font-weight: normal;
             font-size: 10px;

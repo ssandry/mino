@@ -1,5 +1,4 @@
-$mainFont: "Bodoni Moda", serif;
-$secondFont: "Roboto", sans-serif;
+@import "./env.scss";
 
 h1 {
     font-family: $mainFont;
