@@ -91,7 +91,7 @@ const IndexPage = ( { collections } ) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 1.25, delay: .5 }}
+                transition={{ duration: 1.45, delay: .45 }}
             >
                 {
                     collections.map( (c) => {
