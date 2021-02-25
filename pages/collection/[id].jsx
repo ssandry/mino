@@ -151,7 +151,7 @@ const Collection = ({ collection }) => {
 
     return <>
         <Head>
-            <title>MINO | {collection.titleENG} </title>
+            <title>MINO | { collection.titleENG } </title>
         </Head>
         <DefaultLayout>
             <div className="collection-main" id = "collection-main">
