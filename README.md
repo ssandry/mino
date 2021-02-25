@@ -3,7 +3,7 @@
 # #Mino
 
 **Deployed thanks to [Vercel]** <br>
-**Live preview [Mino]**. **[API]**
+**Live preview [Mino]**.
 
 # Dependencies
 
