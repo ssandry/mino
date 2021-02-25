@@ -1,8 +1,10 @@
 // React && Next.JS
+import { useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
+
+// Layout
 import DefaultLayout from "../../layouts/default";
-import { useEffect, useRef } from "react";
 
 // Animations 
 import { Link as Anchor } from "react-scroll";
