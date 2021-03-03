@@ -22,129 +22,114 @@ const Collection = ({ collection }) => {
     const collageRef = useRef(null)
     const lineRef = useRef(null)
 
-    const transitionValue = .105
+    const TRANSITION_VALUE = .1
 
-    // Collection Name Parralax ScrollTrigger
     useEffect( () => {
 
-        const tl = gsap.timeline({
+        // Collection Name Parralax ScrollTrigger
+        {
+            const tl = gsap.timeline({
 
-            scrollTrigger: {
-                id: "trigger0",
-                trigger: "#h1",
-                start: "top center+=50",
-                scrub: true
-            }
+                scrollTrigger: {
+                    id: "trigger0",
+                    trigger: "#h1",
+                    start: "top center+=50",
+                    scrub: true
+                }
 
-        })
+            })
 
-        tl.fromTo(
-            "#h1",
-            { y: 5, transitionDuration: .125 },
-            { y: -40, transitionDuration: .125 }
-        );
+            tl.fromTo(
+                "#h1",
+                { y: 5, transitionDuration: .125 },
+                { y: -40, transitionDuration: .125 }
+            );
 
-        const tl2 = gsap.timeline({
-            scrollTrigger: {
-                id: "trigger1",
-                trigger: "#h1",
-                start: "top center+=50",
-                scrub: true
-            }
+            const tl2 = gsap.timeline({
+                scrollTrigger: {
+                    id: "trigger1",
+                    trigger: "#h1",
+                    start: "top center+=50",
+                    scrub: true
+                }
 
-        })
+            })
 
-        tl2.fromTo(
-            "#h5",
-            { y: 0, transitionDuration: .05 },
-            { y: -20, transitionDuration: .05 }
-        );
+            tl2.fromTo(
+                "#h5",
+                { y: 0, transitionDuration: .05 },
+                { y: -20, transitionDuration: .05 }
+            );
+        }
 
-    }, [] )
-
-    //Collection cover ScrollTrigger
-    useEffect( () => {
-
-        setTimeout( () => {
+        //Collection cover ScrollTrigger
+        {
+            setTimeout( () => {
             
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        id: "trigger8",
+                        trigger: ".imgabs img",
+                        start: "top",
+                        scrub: true
+                    }
+                })
+        
+                tl.fromTo(
+                    ".imgabs img",
+                    { y: 0, x: 0, scale: 1, opacity: 1, skewX: 0, skewY: 0, transitionDuration: .005 },
+                    { y: 60, x: -10, scale: 0.96, opacity: 0.5, skewX: 0.105, skewY: 0.105, transitionDuration: .005 }
+                );
+            }, 500 )
+        }
+
+        // Mount collection collage ScrollTrigger
+        {
+            ScrollTrigger.refresh()
+
             const tl = gsap.timeline({
                 scrollTrigger: {
-                    id: "trigger8",
-                    trigger: ".imgabs img",
-                    start: "top",
+                    id: "trigger3",
+                    trigger: collageRef.current,
+                    start: "top bottom-=100",
+                    scrub: true
+                }
+            })
+
+            tl.fromTo(
+                collageRef.current,
+                { opacity: 0, x: 100, y: 50, scale: 0.96, skewX: -0.45, skewY: -0.75, transitionDuration: TRANSITION_VALUE },
+                { opacity: 1, x: 0, y: 0, scale: 1, skewX: 0, skewY: 0, transitionDuration: TRANSITION_VALUE }
+            );
+        }
+
+        // Mount line ScrollTrigger
+        {
+            ScrollTrigger.refresh()
+
+            const tl2 = gsap.timeline({
+                scrollTrigger: {
+                    id: "trigger4",
+                    trigger: lineRef.current,
+                    start: "top bottom",
+                    end: "top top",
                     scrub: true
                 }
             })
     
-            tl.fromTo(
-                ".imgabs img",
-                { y: 0, x: 0, scale: 1, opacity: 1, skewX: 0, skewY: 0, transitionDuration: .005 },
-                { y: 60, x: -10, scale: 0.96, opacity: 0.5, skewX: 0.105, skewY: 0.105, transitionDuration: .005 }
+            tl2.fromTo(
+                lineRef.current,
+                { opacity: 0, x: -80, skewX: 2, skewY: 1, transitionDuration: TRANSITION_VALUE },
+                { opacity: 1, x: 0, skewX: 0, skewY: 0, transitionDuration: TRANSITION_VALUE }
             );
-        }, 500 )
-
-    }, [] )
-
-    // Mount collection collage ScrollTrigger
-    useEffect(() => {
-
-        ScrollTrigger.refresh()
-
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                id: "trigger3",
-                trigger: collageRef.current,
-                start: "top bottom-=100",
-                scrub: true
+    
+            return () => {
+    
+                tl2.pause(0).kill(true);
+                ScrollTrigger.getById("trigger4").kill(true);
+                gsap.set( lineRef.current, { clearProps: true } );
+    
             }
-        })
-
-        tl.fromTo(
-            collageRef.current,
-            { opacity: 0, x: 100, y: 50, scale: 0.96, skewX: -0.45, skewY: -0.75, transitionDuration: transitionValue },
-            { opacity: 1, x: 0, y: 0, scale: 1, skewX: 0, skewY: 0, transitionDuration: transitionValue }
-        );
-
-        return () => {
-
-            tl.pause(0).kill(true);
-            ScrollTrigger.getById("trigger3").kill(true);
-            gsap.set(collageRef.current, {clearProps: true});
-
-        }
-
-    }, [] );
-
-    // Mount line ScrollTrigger
-    useEffect( () => {
-
-        ScrollTrigger.refresh()
-
-        const tl2 = gsap.timeline({
-            scrollTrigger: {
-                id: "trigger4",
-                trigger: lineRef.current,
-                start: "top bottom",
-                end: "top top",
-                scrub: true
-            }
-        })
-
-        tl2.fromTo(
-            lineRef.current,
-            { opacity: 0, x: -80, skewX: 2, skewY: 1, transitionDuration: transitionValue },
-            { opacity: 1, x: 0, skewX: 0, skewY: 0, transitionDuration: transitionValue}
-        );
-
-        return () => {
-
-            // ComponentDidUnmount
-            // Remove timeline when component did unmount
-
-            tl2.pause(0).kill(true);
-            ScrollTrigger.getById("trigger4").kill(true);
-            gsap.set(lineRef.current, {clearProps: true});
-
         }
 
     }, [] )
@@ -189,7 +174,7 @@ const Collection = ({ collection }) => {
                             transition  ={{ duration: 1, delay: .65 }}
                             id          = "h5"
                         >
-                            {collection.by} {collection.release}
+                            { collection.by } { collection.release }
                         </motion.h5>
                     </div>
                 </div>
@@ -200,7 +185,7 @@ const Collection = ({ collection }) => {
                 ref={ collageRef }
             >
                 <img 
-                    src={collection.collage} 
+                    src={ collection.collage } 
                     alt=""
                 />
             </div>
