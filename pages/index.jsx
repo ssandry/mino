@@ -62,36 +62,21 @@ const IndexPage = ( { collections } ) => {
             <title>MINO Collections</title>
         </Head>
         <DefaultLayout>
-            <motion.div 
+            <div 
                 className="headerIndex" 
                 initial={{ opacity: 0 }} 
                 animate={{ opacity: 1 }} 
                 exit={{ opacity: 0 }} 
                 transition={{ duration: 1.25 }}
             >
-                <h1 
-                    className="logo" 
-                    id="logo"
-                >
-                    <span 
-                        id="h1-top" 
-                        style={{ display: "inline-block" }} 
-                    >MI<span className="n">N</span>O </span>
-                    <span 
-                        id="h1-bot" 
-                        style={{ display: "inline-block", whiteSpace: "pre" }}
-                    > Collections</span>
+                <div className="logo-image"></div>
+                <h2>CREATIVE FASHION STREETWEAR DESIGN</h2>
+                <h1>
+                    MINO <span>and</span> <br/> CONTEMPORARY APPEAL <br/> - <span>for</span> EVERY WOMAN
                 </h1>
-                <p id="h1-about" >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor.
-                </p>
-            </motion.div>
+            </div>
             <motion.div 
                 id="collections-grid"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1.45, delay: .45 }}
             >
                 {
                     collections.map( (c) => {

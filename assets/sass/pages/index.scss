@@ -1,32 +1,46 @@
 .headerIndex {
     width: 100%;
-    height: 285px;
+    height: 502px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    box-sizing: border-box;
-    padding-top: 60px;
-    padding-bottom: 60px;
+
+    margin-top: -20px;
+
+    .logo-image {
+        width: 87px;
+        height: 87px;
+        background-image: url("/static/logo.jpg");
+        background-position: center;
+        background-size: cover;
+    }
 
     h1 {
-        display: block;
-        overflow: hidden;
-    }
-
-    @media screen and (max-width: 700px) {
-        height: 145px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
-    p {
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 14px;
+        font-family: Bodoni Moda;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 70px;
+        line-height: 96px;
         text-align: center;
-        width: 258px;
-        color: #757575;
+
+        color: #EBEBEB;
+
+        span {
+            font-style: italic;
+        }
+    }
+
+    h2 {
+        font-family: Questrial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.365em;
+        text-transform: capitalize;
+
+        color: #CBCBCB;
     }
 }
 
