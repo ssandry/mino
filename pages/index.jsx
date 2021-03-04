@@ -16,47 +16,6 @@ gsap.core.globals("ScrollTrigger", ScrollTrigger);
 
 const IndexPage = ( { collections } ) => {
 
-    useEffect( () => {
-
-        const tl = gsap.timeline({
-
-            scrollTrigger: {
-                id: "trigger0",
-                trigger: "#h1-top",
-                start: "top center-=250",
-                scrub: true
-            }
-
-        })
-
-        const tl1 = gsap.timeline({
-
-            scrollTrigger: {
-                id: "trigger0",
-                trigger: "#h1-bot",
-                start: "top center-=250",
-                scrub: true
-            }
-
-        })
-
-        const tl3 = gsap.timeline({
-
-            scrollTrigger: {
-                id: "trigger0",
-                trigger: "#h1-about",
-                start: "top center-=250",
-                scrub: true
-            }
-
-        })
-
-        tl.fromTo( "#h1-top", { y: 0, transitionDuration: .1 }, { y: -30 } )
-        tl1.fromTo( "#h1-bot", { y: 0, transitionDuration: .3 }, { y: -20 } )
-        tl3.fromTo( "#h1-about", { y: 0, transitionDuration: .1 }, { y: -10 } )
-
-    }, [] )
-
     return <>
         <Head>
             <title>MINO Collections</title>
@@ -74,6 +33,10 @@ const IndexPage = ( { collections } ) => {
                 <h1>
                     MINO <span>and</span> <br/> CONTEMPORARY APPEAL <br/> - <span>for</span> EVERY WOMAN
                 </h1>
+            </div>
+            <div className="filter">
+                <div>Most Popular</div>
+                <div>ホワイトベール</div>
             </div>
             <motion.div 
                 id="collections-grid"
