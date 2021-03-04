@@ -26,42 +26,6 @@ const Collection = ({ collection }) => {
 
     useEffect( () => {
 
-        // Collection Name Parralax ScrollTrigger
-        {
-            const tl = gsap.timeline({
-
-                scrollTrigger: {
-                    id: "trigger0",
-                    trigger: "#h1",
-                    start: "top center+=50",
-                    scrub: true
-                }
-
-            })
-
-            tl.fromTo(
-                "#h1",
-                { y: 5, transitionDuration: .125 },
-                { y: -40, transitionDuration: .125 }
-            );
-
-            const tl2 = gsap.timeline({
-                scrollTrigger: {
-                    id: "trigger1",
-                    trigger: "#h1",
-                    start: "top center+=50",
-                    scrub: true
-                }
-
-            })
-
-            tl2.fromTo(
-                "#h5",
-                { y: 0, transitionDuration: .05 },
-                { y: -20, transitionDuration: .05 }
-            );
-        }
-
         //Collection cover ScrollTrigger
         {
             setTimeout( () => {
@@ -152,30 +116,41 @@ const Collection = ({ collection }) => {
                                 alt=""
                             />
                         </motion.div>
-                        <div id="h1">
-                            <motion.h1 
-                                className   ="logo" 
+                        <div id="h1" className="textContent">
+                            <div className="str1">
+                                <motion.h1 
+                                    className   ="logo" 
+                                    initial     ={{ opacity: 0 }}
+                                    animate     ={{ opacity: 1 }}
+                                    transition  ={{ duration: 1.5, delay: .45 }}
+                                > MI<span className="n">N</span>O /  
+                                </motion.h1>
+                                <motion.h2 
+                                    initial     ={{ opacity: 0 }}
+                                    animate     ={{ opacity: 1 }}
+                                    transition  ={{ duration: 1.5, delay: .65 }}
+                                >
+                                    { collection.titleENG }
+                                </motion.h2>
+                            </div>
+                            <motion.div 
+                                className="str2"
                                 initial     ={{ opacity: 0 }}
                                 animate     ={{ opacity: 1 }}
-                                transition  ={{ duration: 1, delay: .25 }}
+                                transition  ={{ duration: 1.5, delay: .8 }}
                             >
-                                MI<span className="n">N</span>O /
-                            </motion.h1>
-                            <motion.h2
+                                <h5> { collection.by } </h5>
+                            </motion.div>
+                            <motion.div 
+                                className="str3"
                                 initial     ={{ opacity: 0 }}
                                 animate     ={{ opacity: 1 }}
-                                transition  ={{ duration: 1, delay: .35 }}
-                            > {collection.titleENG}
-                            </motion.h2>
+                                transition  ={{ duration: 1.5, delay: 1 }}
+                            >
+                                <p>{ collection.about }{ collection.about }</p>
+                                <div className="time">{ collection.release }</div>
+                            </motion.div>
                         </div>
-                        <motion.h5
-                            initial     ={{ opacity: 0 }}
-                            animate     ={{ opacity: 1 }}
-                            transition  ={{ duration: 1, delay: .65 }}
-                            id          = "h5"
-                        >
-                            { collection.by } { collection.release }
-                        </motion.h5>
                     </div>
                 </div>
             </div>
