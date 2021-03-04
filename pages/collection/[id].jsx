@@ -109,7 +109,7 @@ const Collection = ({ collection }) => {
                         <motion.div 
                             className="imgabs" 
                             layoutId={ collection.coverImg }
-                            transition={{ duration: .65 }}
+                            transition={{ duration: .85 }}
                         >
                             <img 
                                 src={ collection.coverImg } 
