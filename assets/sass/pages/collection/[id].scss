@@ -61,7 +61,8 @@
     justify-content: center;
 
     .collection-name {
-        height: 304px;
+        //height: 304px;
+        //background-color: red;
         width: 830px;
         display: flex;
         flex-direction: column;
@@ -70,6 +71,10 @@
 
         @media screen and ( min-height: 1000px ) and ( min-width: 1600px ) {
             width: 900px;
+        }
+
+        @media screen and ( max-width: 1300px ) {
+            width: 700px;
         }
     }
 
@@ -117,11 +122,16 @@
                 line-height: 22px;
                 letter-spacing: 0.05em;
 
-                color: #E7E7E7;
+                color: #e7e7e7;
 
                 @media screen and ( min-height: 1000px ) and ( min-width: 1600px ) {
                     font-size: 20px;
                     line-height: 26px;
+                }
+
+                @media screen and ( max-width: 1300px ) {
+                    font-size: 14px;
+
                 }
             }
 
@@ -180,10 +190,27 @@
     h6 {
         color: rgb(119, 119, 119);
         letter-spacing: 0.1em;
+
+        @media screen and ( max-width: 1300px ) {
+            font-size: 12px;
+            font-weight: 700;
+        }
     }
 
     h1 {
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 70px;
+        line-height: 107px;
+
+        color: #FFFFFF;
         margin-top: 20px;
+
+        @media screen and ( max-width: 1300px ) {
+            font-size: 60px;
+            line-height: 97px;
+        }
     }
 
     .prod {
@@ -198,11 +225,15 @@
             text-transform: capitalize;
             color: #BFBFBF;
 
+            @media screen and ( max-width: 1300px ) {
+                font-size: 16px;
+            }
+
             @media screen and (max-width: 700px) {
                 font-family: $mainFont;
                 font-style: italic;
                 font-weight: 500;
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 27px;
                 text-transform: capitalize;
 
@@ -219,6 +250,10 @@
             text-transform: capitalize;
             color: #BFBFBF;
             margin-left: 10px;
+
+            @media screen and ( max-width: 1300px ) {
+                font-size: 16px;
+            }
 
             @media screen and (max-width: 700px) {
                 font-family: $secondFont;
@@ -253,7 +288,7 @@
         line-height: 21px;
         cursor: pointer;
 
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width: 1300px) {
             font-size: 16px;
         }
 

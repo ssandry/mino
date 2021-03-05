@@ -8,12 +8,22 @@
 
     margin-top: -45px;
 
+    @media screen and ( max-width: 1300px ) {
+        height: 352px;
+        margin-top: -55px;
+    }
+
     .logo-image {
         width: 87px;
         height: 87px;
         background-image: url("/static/logo.jpg");
         background-position: center;
         background-size: cover;
+
+        @media screen and ( max-width: 1300px ) {
+            width: 67px;
+            height: 67px;
+        }
     }
 
     h1 {
@@ -25,6 +35,11 @@
         text-align: center;
 
         color: #EBEBEB;
+
+        @media screen and ( max-width: 1300px ) {
+            font-size: 50px;
+            line-height: 60px;
+        }
 
         span {
             font-style: italic;
@@ -80,6 +95,11 @@
                 padding-top: 40px;
                 padding-bottom: 40px;
 
+                @media screen and ( max-width: 1300px ) {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                }
+
                 @media screen and ( min-height: 1000px ) {
                     padding-top: 80px;
                     padding-bottom: 80px;
@@ -99,6 +119,10 @@
                     @media screen and ( min-height: 1000px ) and ( min-width: 1600px ) {
                         font-size: 18px;
                     }
+
+                    @media screen and ( max-width: 1300px ) {
+                        font-size: 14px;
+                    }
                 }
             }
 
@@ -113,6 +137,10 @@
 
                 @media screen and ( min-height: 1000px ) and ( min-width: 1600px ) {
                     font-size: 32px;
+                }
+
+                @media screen and ( max-width: 1300px ) {
+                    font-size: 24px;
                 }
             }
         }
