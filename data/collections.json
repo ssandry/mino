@@ -11,6 +11,7 @@
         "about": "The new Voile Blanche collection tells of an endless journey to discover details and materials, for sneakers that become a lesson in style.",
         "preAbout": "The New collection S - J 2022",
         "mostPopular": true,
+        "smallInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "team": [
             {
                 "prof": "Creative Direction",
@@ -42,6 +43,7 @@
         "about": "The new Voile Blanche collection tells of an endless journey to discover details and materials, for sneakers that become a lesson in style.",
         "preAbout": "The New collection F - S 2021",
         "mostPopular": false,
+        "smallInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "team": [
             {
                 "prof": "Creative Direction",
@@ -73,6 +75,7 @@
         "about": "The new Voile Blanche collection tells of an endless journey to discover details and materials, for sneakers that become a lesson in style.",
         "preAbout": "The New collection F - S 2021",
         "mostPopular": false,
+        "smallInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "team": [
             {
                 "prof": "Creative Direction",
@@ -104,6 +107,7 @@
         "about": "The new Voile Blanche collection tells of an endless journey to discover details and materials, for sneakers that become a lesson in style.",
         "preAbout": "The New collection F - S 2021",
         "mostPopular": false,
+        "smallInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "team": [
             {
                 "prof": "Creative Direction",
