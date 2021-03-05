@@ -69,7 +69,7 @@ const IndexPage = ({ collections }) => {
                 </div>
             </motion.div>
             <div className="filter">
-                <div>All</div>
+                <div>2021</div>
                 <div>ホワイトベール</div>
             </div>
             <motion.div 
@@ -78,6 +78,7 @@ const IndexPage = ({ collections }) => {
                 {
                     collections
                     .filter( ({ mostPopular }) => !mostPopular )
+                    .filter( ({ year }) => year === "2021" )
                     .map( (c) => {
                         return (
                             <Card 
@@ -92,7 +93,34 @@ const IndexPage = ({ collections }) => {
                             />
                         )
                     } )
-                    }
+                }
+            </motion.div>
+            <div className="filter">
+                <div>2022</div>
+                <div>ホワイトベール</div>
+            </div>
+            <motion.div 
+                id="collections-grid"
+            >
+                {
+                    collections
+                    .filter( ({ mostPopular }) => !mostPopular )
+                    .filter( ({ year }) => year === "2022" )
+                    .map( (c) => {
+                        return (
+                            <Card 
+                                key = { c.id }
+                                HREF="/collection/[id]"
+                                AS={`/collection/${ c.id }`}
+                                SRC={ c.coverImg }
+                                ALT=""
+                                engCL={ c.titleENG }
+                                jpCL={ c.titleJPN }
+                                YEAR={ c.year }
+                            />
+                        )
+                    } )
+                }
             </motion.div>
         </DefaultLayout>
     </>
