@@ -43,21 +43,21 @@ const IndexPage = ({ collections }) => {
                 id="collections-grid"
             >
                 <Card 
-                    key = { mostPopularCollection.id }
-                    HREF="/collection/[id]"
-                    AS={`/collection/${ mostPopularCollection.id }`}
-                    SRC={ mostPopularCollection.coverImg }
-                    ALT=""
-                    engCL={ mostPopularCollection.titleENG }
-                    jpCL={ mostPopularCollection.titleJPN }
-                    YEAR={ mostPopularCollection.year }
+                    key     = { mostPopularCollection.id }
+                    HREF    = "/collection/[id]"
+                    AS      = {`/collection/${ mostPopularCollection.id }`}
+                    SRC     = { mostPopularCollection.coverImg }
+                    ALT     = ""
+                    engCL   = { mostPopularCollection.titleENG }
+                    jpCL    = { mostPopularCollection.titleJPN }
+                    YEAR    = { mostPopularCollection.year }
                 />
                 <div className="mostPopular-about" >
                     <div className="mostPopular-header">
                         <div className="mostPopular-header-content">
                             <section>
                                 <h4> { mostPopularCollection.by } </h4>
-                                <p> { mostPopularCollection.about } { mostPopularCollection.about } </p>
+                                <p> { mostPopularCollection.smallInfo } </p>
                                 <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                             </section>
                             <div className="img">
@@ -82,14 +82,14 @@ const IndexPage = ({ collections }) => {
                     .map( (c) => {
                         return (
                             <Card 
-                                key = { c.id }
-                                HREF="/collection/[id]"
-                                AS={`/collection/${ c.id }`}
-                                SRC={ c.coverImg }
-                                ALT=""
-                                engCL={ c.titleENG }
-                                jpCL={ c.titleJPN }
-                                YEAR={ c.year }
+                                key     = { c.id }
+                                HREF    = "/collection/[id]"
+                                AS      = {`/collection/${ c.id }`}
+                                SRC     = { c.coverImg }
+                                ALT     = ""
+                                engCL   = { c.titleENG }
+                                jpCL    = { c.titleJPN }
+                                YEAR    = { c.year }
                             />
                         )
                     } )
@@ -109,14 +109,14 @@ const IndexPage = ({ collections }) => {
                     .map( (c) => {
                         return (
                             <Card 
-                                key = { c.id }
-                                HREF="/collection/[id]"
-                                AS={`/collection/${ c.id }`}
-                                SRC={ c.coverImg }
-                                ALT=""
-                                engCL={ c.titleENG }
-                                jpCL={ c.titleJPN }
-                                YEAR={ c.year }
+                                key     = { c.id }
+                                HREF    = "/collection/[id]"
+                                AS      = {`/collection/${ c.id }`}
+                                SRC     = { c.coverImg }
+                                ALT     = ""
+                                engCL   = { c.titleENG }
+                                jpCL    = { c.titleJPN }
+                                YEAR    = { c.year }
                             />
                         )
                     } )
