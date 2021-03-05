@@ -57,30 +57,6 @@ $npm run api # or yarn api
 $npm run build && $npm run start
 ```
 
-# Adapted layout
-
-✔️ **MacBook Pro 1440x900**
-✔️ **MacBook 1152x700**
-✔️ **Laptop with MDPI screen 1280x800**
-
-✔️ **iPad Pro 1024x1366 (Horizontal)**
-✔️ **iPad 768x1024 (Horizontal)**
-✔️ **Surface Duo 540x720 (Vertical)**
-
-✔️ **iPhone X 375x812**
-✔️ **Pixel 2 XL 411x823**
-✔️ **Pixel 2 411x731**
-✔️ **Galaxy S5 360x640**
-✔️ **iPhone 6/7/8 Plus 414x736**
-✔️ **iPhone 6/7/8 375x676**
-✔️ **Moto G4 X 360x640**
-
-❌ **iPad Pro 1024x1366 (Vertical)**
-❌ **iPad 768x1024 (Vertical)**
-❌ **Surface Duo 540x720 (Horizontal)**
-
-❌ **iPhone 5/SE 320x568**
-
 [Python3]: <https://www.python.org/>
 [NodeJS]: <https://nodejs.org/en/>
 [Mino]: <https://mino-ssandry.vercel.app/>
