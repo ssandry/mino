@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Head from "next/head";
 import DefaultLayout from "../layouts/default";
 import Card from "../components/Card/Card";
@@ -14,7 +13,9 @@ import { motion } from "framer-motion";
 gsap.registerPlugin(ScrollTrigger);
 gsap.core.globals("ScrollTrigger", ScrollTrigger);
 
-const IndexPage = ( { collections } ) => {
+const IndexPage = ({ collections }) => {
+
+    const mostPopularCollection = collections.find( ({ mostPopular }) => mostPopular );
 
     return <>
         <Head>
@@ -41,22 +42,57 @@ const IndexPage = ( { collections } ) => {
             <motion.div 
                 id="collections-grid"
             >
+                <Card 
+                    key = { mostPopularCollection.id }
+                    HREF="/collection/[id]"
+                    AS={`/collection/${ mostPopularCollection.id }`}
+                    SRC={ mostPopularCollection.coverImg }
+                    ALT=""
+                    engCL={ mostPopularCollection.titleENG }
+                    jpCL={ mostPopularCollection.titleJPN }
+                    YEAR={ mostPopularCollection.year }
+                />
+                <div className="mostPopular-about" >
+                    <div className="mostPopular-header">
+                        <div className="mostPopular-header-content">
+                            <section>
+                                <h4> { mostPopularCollection.by } </h4>
+                                <p> { mostPopularCollection.about } { mostPopularCollection.about } </p>
+                                <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                            </section>
+                            <div className="img">
+                                <img src="/data/mostPopular/mostPopular.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="space"></div>
+                </div>
+            </motion.div>
+            <div className="filter">
+                <div>All</div>
+                <div>ホワイトベール</div>
+            </div>
+            <motion.div 
+                id="collections-grid"
+            >
                 {
-                    collections.map( (c) => {
+                    collections
+                    .filter( ({ mostPopular }) => !mostPopular )
+                    .map( (c) => {
                         return (
                             <Card 
-                                key = {c.id}
+                                key = { c.id }
                                 HREF="/collection/[id]"
-                                AS={`/collection/${c.id}`}
-                                SRC={c.coverImg}
+                                AS={`/collection/${ c.id }`}
+                                SRC={ c.coverImg }
                                 ALT=""
-                                engCL={c.titleENG}
-                                jpCL={c.titleJPN}
-                                YEAR={c.year}
+                                engCL={ c.titleENG }
+                                jpCL={ c.titleJPN }
+                                YEAR={ c.year }
                             />
                         )
                     } )
-                }
+                    }
             </motion.div>
         </DefaultLayout>
     </>
