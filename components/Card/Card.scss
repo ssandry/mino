@@ -50,6 +50,7 @@
 
             h6 {
                 color: #cfcfcf;
+
                 span {
                     font-weight: 300;
                     color: #cfcfcf;
@@ -62,6 +63,10 @@
                 line-height: 21px;
                 letter-spacing: 0.2em;
                 color: #cfcfcf;
+
+                @media screen and ( min-height: 1000px ) and ( min-width: 1600px ) {
+                    font-size: 22px;
+                }
             }
         }
     }
