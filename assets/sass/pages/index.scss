@@ -1,3 +1,8 @@
+
+$PC_ADAPTIVE_MEDIUM: 1300px;
+$PC_ADAPTIVE_SMALL: 710px;
+$MOBILE_ADAPTIVE: 550px;
+
 .headerIndex {
     width: 100%;
     height: 502px;
@@ -8,12 +13,12 @@
 
     margin-top: -45px;
 
-    @media screen and ( max-width: 1300px ) {
+    @media screen and ( max-width: $PC_ADAPTIVE_MEDIUM ) {
         height: 352px;
         margin-top: -55px;
     }
 
-    @media screen and ( max-width: 400px ) {
+    @media screen and ( max-width: $MOBILE_ADAPTIVE ) {
         height: 322px;
         box-sizing: border-box;
         padding-top: 30px;
@@ -27,12 +32,12 @@
         background-position: center;
         background-size: cover;
 
-        @media screen and ( max-width: 1300px ) {
+        @media screen and ( max-width: $PC_ADAPTIVE_MEDIUM ) {
             width: 67px;
             height: 67px;
         }
 
-        @media screen and ( max-width: 400px ) {
+        @media screen and ( max-width: $MOBILE_ADAPTIVE ) {
             width: 47px;
             height: 47px;
         }
@@ -48,12 +53,12 @@
 
         color: #EBEBEB;
 
-        @media screen and ( max-width: 1300px ) {
+        @media screen and ( max-width: $PC_ADAPTIVE_MEDIUM ) {
             font-size: 50px;
             line-height: 60px;
         }
 
-        @media screen and ( max-width: 400px ) {
+        @media screen and ( max-width: $MOBILE_ADAPTIVE ) {
             font-family: Bodoni Moda;
             font-style: normal;
             font-weight: bold;
@@ -81,7 +86,7 @@
 
         color: #CBCBCB;
 
-        @media screen and ( max-width: 400px ) {
+        @media screen and ( max-width: $MOBILE_ADAPTIVE ) {
             font-size: 12px;
             line-height: 12px;
             text-align: center;
@@ -129,7 +134,7 @@
                 padding-top: 40px;
                 padding-bottom: 40px;
 
-                @media screen and ( max-width: 1300px ) {
+                @media screen and ( max-width: $PC_ADAPTIVE_MEDIUM ) {
                     padding-top: 20px;
                     padding-bottom: 20px;
                 }
@@ -139,7 +144,7 @@
                     padding-bottom: 80px;
                 }
 
-                @media screen and ( max-height: 710px ) {
+                @media screen and ( max-height: $PC_ADAPTIVE_SMALL ) {
                     padding-top: 10px;
                     padding-bottom: 10px;
                 }
@@ -159,15 +164,15 @@
                         font-size: 18px;
                     }
 
-                    @media screen and ( max-width: 1300px ) {
+                    @media screen and ( max-width: $PC_ADAPTIVE_MEDIUM ) {
                         font-size: 14px;
                     }
 
-                    @media screen and ( max-height: 710px ) {
+                    @media screen and ( max-height: $PC_ADAPTIVE_SMALL ) {
                         font-size: 13px;
                     }
 
-                    @media screen and ( max-width: 400px ) {
+                    @media screen and ( max-width: $MOBILE_ADAPTIVE ) {
                         font-size: 12px;
                         margin-top: 10px;
                     }
