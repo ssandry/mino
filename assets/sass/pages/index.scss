@@ -15,6 +15,9 @@
 
     @media screen and ( max-width: 400px ) {
         height: 322px;
+        box-sizing: border-box;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .logo-image {
