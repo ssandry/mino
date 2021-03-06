@@ -13,6 +13,10 @@
         margin-top: -55px;
     }
 
+    @media screen and ( max-width: 400px ) {
+        height: 322px;
+    }
+
     .logo-image {
         width: 87px;
         height: 87px;
@@ -23,6 +27,11 @@
         @media screen and ( max-width: 1300px ) {
             width: 67px;
             height: 67px;
+        }
+
+        @media screen and ( max-width: 400px ) {
+            width: 47px;
+            height: 47px;
         }
     }
 
@@ -41,6 +50,18 @@
             line-height: 60px;
         }
 
+        @media screen and ( max-width: 400px ) {
+            font-family: Bodoni Moda;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 26px;
+            line-height: 137%;
+
+            text-align: center;
+
+            color: #EBEBEB;
+        }
+
         span {
             font-style: italic;
         }
@@ -56,6 +77,16 @@
         text-transform: capitalize;
 
         color: #CBCBCB;
+
+        @media screen and ( max-width: 400px ) {
+            font-size: 12px;
+            line-height: 12px;
+            text-align: center;
+            letter-spacing: 0.165em;
+            text-transform: capitalize;
+
+            color: #CBCBCB;
+        }
     }
 }
 
@@ -105,6 +136,11 @@
                     padding-bottom: 80px;
                 }
 
+                @media screen and ( max-height: 710px ) {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+
                 p {
                     font-family: Questrial;
                     font-style: normal;
@@ -122,6 +158,15 @@
 
                     @media screen and ( max-width: 1300px ) {
                         font-size: 14px;
+                    }
+
+                    @media screen and ( max-height: 710px ) {
+                        font-size: 13px;
+                    }
+
+                    @media screen and ( max-width: 400px ) {
+                        font-size: 12px;
+                        margin-top: 10px;
                     }
                 }
             }
@@ -142,6 +187,10 @@
                 @media screen and ( max-width: 1300px ) {
                     font-size: 24px;
                 }
+
+                @media screen and ( max-width: 400px ) {
+                    font-size: 18px;
+                }
             }
         }
     }
@@ -159,6 +208,14 @@
     div {
         @media screen and ( min-height: 1000px ) and ( min-width: 1600px ) {
             font-size: 22px;
+        }
+
+        @media screen and ( max-height: 710px ) {
+            font-size: 14px;
+        }
+
+        @media screen and ( max-width: 400px ) {
+            font-size: 12px;
         }
     }
 }
