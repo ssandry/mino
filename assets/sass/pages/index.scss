@@ -70,7 +70,12 @@ $MOBILE_ADAPTIVE: 550px;
             color: #EBEBEB;
         }
 
-        span {
+        span.word {
+            display: inline-block;
+            white-space: pre;
+        }
+
+        span.italic {
             font-style: italic;
         }
     }
