@@ -25,6 +25,10 @@ const IndexPage = ({ collections }) => {
 
             const targets = document.querySelectorAll(".headerIndex .word")
 
+            const width = window.innerWidth;
+
+            const start = width > 500 ? 300 : 200;
+
             const arr = [ "-20", "40", "-20", "40", "-40", "5", "50" ]
 
             targets.forEach( (target, i) => {
@@ -32,7 +36,7 @@ const IndexPage = ({ collections }) => {
                     scrollTrigger: {
                         id: "trigger3",
                         trigger: target,
-                        start: "top top+=300",
+                        start: `top top+=${start}`,
                         scrub: true,
                     }
                 })
@@ -47,9 +51,12 @@ const IndexPage = ({ collections }) => {
         {
 
             const height = window.innerHeight;
-            console.dir( height )
+            const width = window.innerWidth;
 
-            const start = window.innerHeight > 1000 ? window.innerHeight / 3 : window.innerHeight / 4.5
+            const PC_ADAPTIVE = height > 1000 ? height / 3 : height / 4.5
+            const MOBILE_ADAPTIVE = height / 2.5
+
+            const start = width > 500 ? PC_ADAPTIVE : MOBILE_ADAPTIVE
 
             const tl = gsap.timeline({
                 scrollTrigger: {
