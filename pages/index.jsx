@@ -32,7 +32,7 @@ const IndexPage = ({ collections }) => {
                     scrollTrigger: {
                         id: "trigger3",
                         trigger: target,
-                        start: "top top+=200",
+                        start: "top top+=300",
                         scrub: true,
                     }
                 })
@@ -45,11 +45,17 @@ const IndexPage = ({ collections }) => {
             } )
         }
         {
+
+            const height = window.innerHeight;
+            console.dir( height )
+
+            const start = window.innerHeight > 1000 ? window.innerHeight / 3 : window.innerHeight / 4.5
+
             const tl = gsap.timeline({
                 scrollTrigger: {
                     id: "trigger3",
                     trigger: "#mp",
-                    start: "top bottom-=200",
+                    start: `top bottom-=${start}`,
                     end: "center-=200",
                     scrub: true,
                 }
@@ -78,17 +84,17 @@ const IndexPage = ({ collections }) => {
                 <div className="logo-image"></div>
                 <h2 id="mp2"><span>CREATIVE FASHION</span> <span>STREETWEAR DESIGN</span></h2>
                 <h1>
-                    <span className="word" dur = "0.75">MINO </span> 
+                    <span className="word" dur = "0.85">MINO </span> 
                     <span className="italic">
                         <span className="word" dur = "0.55">and </span>
                     </span> <br/> 
-                    <span className="word" dur = "0.35">CONTEMPORARY </span> 
-                    <span className="word" dur = "0.9">APPEAL </span> <br/> - 
+                    <span className="word" dur = "0.4">CONTEMPORARY </span> 
+                    <span className="word" dur = "0.35">APPEAL </span> <br/> - 
                     <span className="italic">
-                        <span className="word" dur = "0.4"> for </span>
+                        <span className="word" dur = "0.2"> for </span>
                     </span> 
-                    <span className="word" dur = "0.75">EVERY </span> 
-                    <span className="word" dur = "0.35">WOMAN</span>
+                    <span className="word" dur = "0.15">EVERY </span> 
+                    <span className="word" dur = "0.25">WOMAN</span>
                 </h1>
             </div>
             <div id="mp">
