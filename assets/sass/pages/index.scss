@@ -15,8 +15,8 @@ $MOBILE_ADAPTIVE: 550px;
     margin-top: -45px;
 
     @media screen and ( min-width: $PC_ADAPTIVE_HIGH ) {
-        height: 542px;
-        margin-top: -65px;
+        height: 582px;
+        margin-top: -45px;
     }
 
     @media screen and ( max-width: $PC_ADAPTIVE_MEDIUM ) {
@@ -65,8 +65,8 @@ $MOBILE_ADAPTIVE: 550px;
         color: #EBEBEB;
 
         @media screen and ( min-width: $PC_ADAPTIVE_HIGH ) {
-            font-size: 80px;
-            line-height: 96px;
+            font-size: 90px;
+            line-height: 106px;
         }
 
         @media screen and ( max-width: $PC_ADAPTIVE_MEDIUM ) {
@@ -166,8 +166,8 @@ $MOBILE_ADAPTIVE: 550px;
                 }
 
                 @media screen and ( min-height: 1000px ) {
-                    padding-top: 110px;
-                    padding-bottom: 110px;
+                    padding-top: 100px;
+                    padding-bottom: 100px;
                 }
 
                 @media screen and ( max-height: $PC_ADAPTIVE_SMALL ) {
@@ -187,7 +187,8 @@ $MOBILE_ADAPTIVE: 550px;
                     color: #E7E7E7;
 
                     @media screen and ( min-height: 1000px ) and ( min-width: 1600px ) {
-                        font-size: 18px;
+                        font-size: 20px;
+                        line-height: 28px;
                     }
 
                     @media screen and ( max-width: $PC_ADAPTIVE_MEDIUM ) {
