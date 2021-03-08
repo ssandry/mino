@@ -54,28 +54,26 @@ const IndexPage = ({ collections }) => {
             const width = window.innerWidth;
 
             const PC_ADAPTIVE = height > 1000 ? height / 3 : height / 4.5
-            const MOBILE_ADAPTIVE = height / 2.3
 
-            const start = width > 500 ? PC_ADAPTIVE : MOBILE_ADAPTIVE
-            const end = width > 500 ? 400 : 200
-
-            const AdaptiveTranslateY = width > 500 ? 90 : 60
-
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    id: "trigger3",
-                    trigger: "#mp",
-                    start: `top bottom-=${start}`,
-                    end: `center-=${end}`,
-                    scrub: true,
-                }
-            })
-
-            tl.fromTo(
-                "#mp",
-                { opacity: 0, translateY: AdaptiveTranslateY, transitionDuration: .5 },
-                { opacity: 1, translateY: 0, transitionDuration: .5 }
-            );
+            if( width > 500 ) {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        id: "trigger3",
+                        trigger: "#mp",
+                        start: `top bottom-=${PC_ADAPTIVE}`,
+                        end: `center-=400`,
+                        scrub: true,
+                    }
+                })
+    
+                tl.fromTo(
+                    "#mp",
+                    { opacity: 0, translateY: 90, transitionDuration: .3 },
+                    { opacity: 1, translateY: 0, transitionDuration: .3 }
+                );
+            } else {
+                console.log( "Anim off" )
+            }
         }
     }, [])
 
