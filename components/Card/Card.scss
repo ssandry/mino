@@ -4,6 +4,11 @@
     max-height: 688px;
     display: block;
 
+    @media screen and (min-width: 1600px) and (min-height: 700px) {
+        height: 90vh;
+        max-height: 808px;
+    }
+
     @media screen and (max-width: 700px) {
         height: 450px;
         max-height: 388px;
