@@ -19,6 +19,12 @@ $MOBILE_ADAPTIVE: 550px;
         margin-top: -45px;
     }
 
+    @media screen 
+    and ( min-width: 1600px )
+    and ( max-height: 900px ) {
+        margin-top: -90px;
+    }
+
     @media screen and ( max-width: $PC_ADAPTIVE_MEDIUM ) {
         height: 402px;
         margin-top: -55px;
@@ -71,6 +77,11 @@ $MOBILE_ADAPTIVE: 550px;
 
         @media screen and ( max-width: $PC_ADAPTIVE_MEDIUM ) {
             font-size: 60px;
+            line-height: 76px;
+        }
+
+        @media screen and ( max-height: 700px ) {
+            font-size: 50px;
             line-height: 76px;
         }
 
