@@ -1,17 +1,12 @@
+import React, { useEffect } from "react";
 import Head from "next/head";
 import DefaultLayout from "../layouts/default";
-import Card from "../components/Card/Card";
+import Card from "../components/Card";
 
-import { useEffect } from "react";
-
-// GSAP
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
-// Framer 
 import { motion } from "framer-motion";
 
-// Register ScrollTrigger for use on GSAP 
 gsap.registerPlugin(ScrollTrigger);
 gsap.core.globals("ScrollTrigger", ScrollTrigger);
 
