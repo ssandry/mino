@@ -5,7 +5,6 @@ import Card from "../components/Card";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.core.globals("ScrollTrigger", ScrollTrigger);
@@ -24,7 +23,7 @@ const IndexPage = ({ collections }) => {
 
             const start = width > 500 ? 300 : 200;
 
-            const arr = [ "-20", "40", "-20", "40", "-40", "5", "50" ]
+            const valuesForTransform = [ "-20", "40", "-20", "40", "-40", "5", "50" ]
 
             targets.forEach( (target, i) => {
                 const tl = gsap.timeline({
@@ -39,7 +38,7 @@ const IndexPage = ({ collections }) => {
                 tl.fromTo(
                     target,
                     { opacity: 1, transitionDuration: target.attributes.dur.nodeValue, x: 0 },
-                    { opacity: 0, transitionDuration: target.attributes.dur.nodeValue, x: arr[i] }
+                    { opacity: 0, transitionDuration: target.attributes.dur.nodeValue, x: valuesForTransform[i] }
                 );
             } )
         }
@@ -67,7 +66,7 @@ const IndexPage = ({ collections }) => {
                     { opacity: 1, translateY: 0, transitionDuration: .3 }
                 );
             } else {
-                console.log( "Anim off" )
+                console.log( "Anim off" );
             }
         }
     }, [])
@@ -78,26 +77,26 @@ const IndexPage = ({ collections }) => {
         </Head>
         <DefaultLayout>
             <div 
-                className="headerIndex" 
-                initial={{ opacity: 0 }} 
-                animate={{ opacity: 1 }} 
-                exit={{ opacity: 0 }} 
-                transition={{ duration: 1.25 }}
+                className   = "headerIndex" 
+                initial     = {{ opacity: 0 }} 
+                animate     = {{ opacity: 1 }} 
+                exit        = {{ opacity: 0 }} 
+                transition  = {{ duration: 1.25 }}
             >
                 <div className="logo-image"></div>
                 <h2 id="mp2"><span>CREATIVE FASHION</span> <span>STREETWEAR DESIGN</span></h2>
                 <h1>
-                    <span className="word" dur = "0.85">MINO </span> 
+                    <span className="word" dur="0.85">MINO </span> 
                     <span className="italic">
-                        <span className="word" dur = "0.55">and </span>
+                        <span className="word" dur="0.55">and </span>
                     </span> <br/> 
-                    <span className="word" dur = "0.4">CONTEMPORARY </span> 
-                    <span className="word" dur = "0.35">APPEAL </span> <br/> - 
+                    <span className="word" dur="0.4">CONTEMPORARY </span> 
+                    <span className="word" dur="0.35">APPEAL - </span> <br/>
                     <span className="italic">
-                        <span className="word" dur = "0.2"> for </span>
+                        <span className="word" dur="0.2"> for </span>
                     </span> 
-                    <span className="word" dur = "0.15">EVERY </span> 
-                    <span className="word" dur = "0.25">WOMAN</span>
+                    <span className="word" dur="0.15">EVERY </span> 
+                    <span className="word" dur="0.25">WOMAN</span>
                 </h1>
             </div>
             <div id="mp">
@@ -105,13 +104,11 @@ const IndexPage = ({ collections }) => {
                     <div>Most Popular</div>
                     <div>ホワイトベール</div>
                 </div>
-                <motion.div 
-                    id="collections-grid"
-                >
+                <div id="collections-grid">
                     <Card 
                         key     = { mostPopularCollection.id }
                         HREF    = "/collection/[id]"
-                        AS      = {`/collection/${ mostPopularCollection.id }`}
+                        AS      = { `/collection/${ mostPopularCollection.id }` }
                         SRC     = { mostPopularCollection.coverImg }
                         ALT     = ""
                         engCL   = { mostPopularCollection.titleENG }
@@ -127,21 +124,22 @@ const IndexPage = ({ collections }) => {
                                     <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                                 </section>
                                 <div className="img">
-                                    <img src="/data/mostPopular/mostPopular.png" alt=""/>
+                                    <img 
+                                        src="/data/mostPopular/mostPopular.png" 
+                                        alt=""
+                                    />
                                 </div>
                             </div>
                         </div>
                         <div className="space"></div>
                     </div>
-                </motion.div>
+                </div>
             </div>
             <div className="filter">
                 <div>2021</div>
                 <div>ホワイトベール</div>
             </div>
-            <motion.div 
-                id="collections-grid"
-            >
+            <div id="collections-grid">
                 {
                     collections
                     .filter( ({ mostPopular }) => !mostPopular )
@@ -161,14 +159,12 @@ const IndexPage = ({ collections }) => {
                         )
                     } )
                 }
-            </motion.div>
+            </div>
             <div className="filter">
                 <div>2022</div>
                 <div>ホワイトベール</div>
             </div>
-            <motion.div 
-                id="collections-grid"
-            >
+            <div id="collections-grid">
                 {
                     collections
                     .filter( ({ mostPopular }) => !mostPopular )
@@ -178,7 +174,7 @@ const IndexPage = ({ collections }) => {
                             <Card 
                                 key     = { c.id }
                                 HREF    = "/collection/[id]"
-                                AS      = {`/collection/${ c.id }`}
+                                AS      = { `/collection/${ c.id }` }
                                 SRC     = { c.coverImg }
                                 ALT     = ""
                                 engCL   = { c.titleENG }
@@ -188,7 +184,7 @@ const IndexPage = ({ collections }) => {
                         )
                     } )
                 }
-            </motion.div>
+            </div>
         </DefaultLayout>
     </>
 }
