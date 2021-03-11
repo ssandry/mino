@@ -1,25 +1,14 @@
-# #Mino
+## #Mino
 
 **Live preview [Mino]**. <br>
+
 **Deployed thanks to [Vercel]**
 
-# Dependencies
-
-- [Python3] - A high-level general-purpose programming language
-- [NodeJS] - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
-
-# Used animation libraries
+## Used animation libraries
 
 - [FramerMotion]
 - [GSAP]
 - [GSAP/ScrollTrigger]
-
-# Check dependencies versions
-
-```sh
-$python3 -version
-$node -v
-```
 
 # Install
 
