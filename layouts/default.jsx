@@ -1,5 +1,5 @@
-import TheHeader from "../components/TheHeader/TheHeader";
-import TheFooter from "../components/TheFooter/index";
+import TheHeader from "../components/TheHeader";
+import TheFooter from "../components/TheFooter";
 
 const DefaultLayout = ( { children } ) => {
     return <>

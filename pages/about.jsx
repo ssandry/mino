@@ -1,7 +1,7 @@
 import Head from "next/head";
 import DefaultLayout from "../layouts/default";
 
-const AboutPage = ( { collections } ) => {
+const AboutPage = () => {
     return <>
         <Head>
             <title>MINO About</title>
