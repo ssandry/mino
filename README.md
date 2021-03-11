@@ -10,7 +10,7 @@
 - [GSAP]
 - [GSAP/ScrollTrigger]
 
-# Install
+# Setup
 
 ```sh
 $git clone git+https://github.com/ssandry/mino.git
